@@ -11,6 +11,8 @@
     <modules>
         <module>yuukomponent-api</module>
         <module>yuukomponent-core</module>
+        <module>yuukomponent-spigot</module>
+        <module>yuukomponent-ideal</module>
     </modules>
 
     <properties>
