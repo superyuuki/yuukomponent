@@ -1,63 +1,53 @@
 package com.superyuuki.yuukomponent.ideal;
 
-import com.superyuuki.yuukomponent.ideal.so.EmptyObject;
+import com.superyuuki.yuukomponent.ideal.standard.StandardBehavior;
+import com.superyuuki.yuukomponent.ideal.standard.StandardComponent;
 
 import java.util.Map;
 
-public class TestComponent implements StatComponent {
+public class TestComponent implements StandardComponent {
 
     private final CompStats compStats;
-    private final CompBehavior compBehavior;
-    private final Map<String, StatComponent> children;
+    private final StandardBehavior standardBehavior;
+    private final Map<String, StandardComponent> children;
 
-    public TestComponent(CompStats compStats, CompBehavior compBehavior, Map<String, StatComponent> children) {
+    public TestComponent(CompStats compStats, StandardBehavior standardBehavior, Map<String, StandardComponent> children) {
         this.compStats = compStats;
-        this.compBehavior = compBehavior;
+        this.standardBehavior = standardBehavior;
         this.children = children;
     }
 
     @Override
     public void handle(Object event) {
-        var stats = stats();
+        StatObject object = new EmptyObject();
 
-        for (StatComponent child : children.values()) {
-            child.handle(event, stats);
+        stats(object);
+
+        standardBehavior.behavior(event, object);
+
+        for (StandardComponent child : children.values()) {
+            child.handle(event, object);
         }
     }
 
     @Override
     public void handle(Object event, StatObject stats) {
-        compBehavior.doSomething(event, stats);
+        standardBehavior.behavior(event, stats);
 
-        for (StatComponent child : children.values()) {
+        for (StandardComponent child : children.values()) {
             child.handle(event, stats);
         }
     }
 
-    @Override
-    public StatObject stats() {
-
-        StatObject initial = new EmptyObject();
-
-        compStats.modify(initial);
-
-        for (StatComponent statComponent : children.values()) {
-            statComponent.stats(initial);
-        }
-
-        return initial;
-    }
 
     @Override
-    public StatObject stats(StatObject initialStats) {
+    public void stats(StatObject initialStats) {
 
         compStats.modify(initialStats);
 
-        for (StatComponent statComponent : children.values()) {
-            compStats.modify(initialStats);
+        for (StandardComponent standardComponent : children.values()) {
+            standardComponent.stats(initialStats);
         }
-
-        return initialStats;
 
     }
 
