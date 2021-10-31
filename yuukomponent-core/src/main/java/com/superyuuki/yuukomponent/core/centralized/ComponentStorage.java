@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core.centralized;
 
-import com.superyuuki.yuukomponent.core.Component;
+import com.superyuuki.yuukomponent.api.Component;
 
 import java.util.Collection;
 import java.util.NoSuchElementException;

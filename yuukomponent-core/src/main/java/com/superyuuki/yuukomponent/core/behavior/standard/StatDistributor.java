@@ -1,8 +1,8 @@
 package com.superyuuki.yuukomponent.core.behavior.standard;
 
-import com.superyuuki.yuukomponent.api.behavior.Event;
-import com.superyuuki.yuukomponent.api.keyed.stat.map.StatObject;
-import com.superyuuki.yuukomponent.core.Behavior;
+import com.superyuuki.yuukomponent.api.Event;
+import com.superyuuki.yuukomponent.api.inbuilt.stat.StatObject;
+import com.superyuuki.yuukomponent.api.Behavior;
 
 import java.util.List;
 
