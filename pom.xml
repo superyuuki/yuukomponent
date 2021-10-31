@@ -8,10 +8,11 @@
     <artifactId>yuukomponent</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
+
     <modules>
-        <module>yuukomponent-api-constants</module>
-        <module>yuukomponent-api-design1</module>
-        <module>yuukomponent-ideal</module>
+        <module>yuukomponent-api</module>
+        <module>yuukomponent-core</module>
+        <module>yuukomponent-spigot</module>
     </modules>
 
     <properties>
