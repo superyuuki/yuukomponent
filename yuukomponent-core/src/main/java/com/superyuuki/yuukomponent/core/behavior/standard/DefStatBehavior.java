@@ -1,7 +1,7 @@
 package com.superyuuki.yuukomponent.core.behavior.standard;
 
 import com.superyuuki.yuukomponent.core.stat.StatDef;
-import com.superyuuki.yuukomponent.api.keyed.stat.map.StatObject;
+import com.superyuuki.yuukomponent.api.inbuilt.stat.StatObject;
 import com.superyuuki.yuukomponent.core.behavior.TypedBehavior;
 
 public class DefStatBehavior implements TypedBehavior<StatObject> {

@@ -1,13 +1,12 @@
 package com.superyuuki.yuukomponent.core.component;
 
-import com.superyuuki.yuukomponent.api.behavior.Event;
-import com.superyuuki.yuukomponent.core.Behavior;
-import com.superyuuki.yuukomponent.core.Component;
+import com.superyuuki.yuukomponent.api.Event;
+import com.superyuuki.yuukomponent.api.Behavior;
+import com.superyuuki.yuukomponent.api.Component;
 
 import java.util.Collection;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.concurrent.ForkJoinTask;
 
 public class MappedComponent implements Component {
 
@@ -43,6 +42,16 @@ public class MappedComponent implements Component {
 
     @Override
     public Optional<Component> search(UUID uuid) {
+        if (uuid.equals(identifier)) return Optional.of(this);
+
+        for (Component component : children) {
+            Optional<Component> possible = component.search(uuid);
+
+            if (possible.isPresent()) {
+                return possible;
+            }
+        }
+
         return Optional.empty();
     }
 }

@@ -9,7 +9,7 @@ Staging ground for a synchronous YuuKomponent core implementation
 
 ##Required Features
 - [] Behavior loading
-- [x] Component modelling
+- [x] Component modellingn 
 - [] Component persistence
 - [] Component loading
 - [x] Stat calculation

@@ -1,7 +1,7 @@
 package com.superyuuki.yuukomponent.core.behavior;
 
-import com.superyuuki.yuukomponent.api.behavior.Event;
-import com.superyuuki.yuukomponent.core.Behavior;
+import com.superyuuki.yuukomponent.api.Event;
+import com.superyuuki.yuukomponent.api.Behavior;
 
 public interface TypedBehavior<T extends Event> {
 
