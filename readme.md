@@ -21,7 +21,7 @@ Staging ground for a synchronous YuuKomponent core implementation
 - **Stats**: A behavior + nexus implementation of a recursive Component tree search that combines children Nodes' Configuration values to provide a compound value for use by relevant behaviors.
 - **Persistents**: A behavior + nexus implementation of Persistence
 - 
-##Required Features
+## Required Features
 - [?] Behavior loading
 - [x] Component modellingn 
 - [?] Component persistence
@@ -30,7 +30,7 @@ Staging ground for a synchronous YuuKomponent core implementation
 - [] Stat definitions
 - [] Stat definition storage persistence
 
-##Event handling in order of importance
+## Event handling in order of importance
  1. (Component Level) Hardcoded event overrides such as SlotChangeEvents
  2. (Behavior Level) Reserved behaviors such as the built in Stat and Persistent behaviors
  3. (Behavior Level) User behaviors
