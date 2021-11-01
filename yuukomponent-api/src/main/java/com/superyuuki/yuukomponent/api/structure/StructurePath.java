@@ -1,4 +1,4 @@
-package com.superyuuki.yuukomponent.api;
+package com.superyuuki.yuukomponent.api.structure;
 
 import java.util.Collection;
 
