@@ -2,7 +2,7 @@ package com.superyuuki.yuukomponent.core.inbuilt.stat.stat;
 
 import com.superyuuki.yuukomponent.api.inbuilt.OptionalKey;
 import com.superyuuki.yuukomponent.api.inbuilt.stat.OptionalStat;
-import com.superyuuki.yuukomponent.core.centralized.event.EventDispatcher;
+import com.superyuuki.yuukomponent.core.event.EventDispatcher;
 
 import java.util.Optional;
 import java.util.UUID;
