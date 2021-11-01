@@ -2,6 +2,7 @@ package com.superyuuki.yuukomponent.core.inbuilt.stat.object;
 
 import com.superyuuki.yuukomponent.api.inbuilt.stat.StatCorrectness;
 
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class ScListing implements StatCorrectness {
@@ -22,7 +23,7 @@ public class ScListing implements StatCorrectness {
     }
 
     @Override
-    public String missingKey() {
-        return value;
+    public Optional<String> missingKey() {
+        return Optional.ofNullable(value);
     }
 }

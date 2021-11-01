@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api.inbuilt.stat;
 
-import com.superyuuki.yuukomponent.api.Event;
+import com.superyuuki.yuukomponent.api.behavior.Event;
 
 import java.util.function.Function;
 

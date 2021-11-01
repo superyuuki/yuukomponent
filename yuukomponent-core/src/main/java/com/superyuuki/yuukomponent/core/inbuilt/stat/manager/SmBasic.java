@@ -4,7 +4,7 @@ import com.superyuuki.yuukomponent.api.inbuilt.Key;
 import com.superyuuki.yuukomponent.api.inbuilt.stat.Stat;
 import com.superyuuki.yuukomponent.core.inbuilt.stat.object.NullObject;
 import com.superyuuki.yuukomponent.api.inbuilt.stat.StatObject;
-import com.superyuuki.yuukomponent.core.centralized.event.EventDispatcher;
+import com.superyuuki.yuukomponent.core.event.EventDispatcher;
 import com.superyuuki.yuukomponent.core.inbuilt.stat.StatManager;
 import com.superyuuki.yuukomponent.core.inbuilt.stat.StatSource;
 
