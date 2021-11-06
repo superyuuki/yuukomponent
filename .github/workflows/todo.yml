@@ -1,0 +1,16 @@
+name: TODO issue proc
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: TODO to Issue
+      uses: alstr/todo-to-issue-action@v4.4
