@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  convert:
 
     runs-on: ubuntu-latest
 
