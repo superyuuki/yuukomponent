@@ -1,4 +1,4 @@
-package com.superyuuki.yuukomponent.core.behavior.behavior;
+package com.superyuuki.yuukomponent.core.behavior;
 
 import com.superyuuki.yuukomponent.api.behavior.Behavior;
 import com.superyuuki.yuukomponent.api.behavior.Event;

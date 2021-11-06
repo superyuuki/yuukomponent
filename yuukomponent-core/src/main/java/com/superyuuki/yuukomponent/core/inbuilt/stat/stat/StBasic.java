@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core.inbuilt.stat.stat;
 
-import com.superyuuki.yuukomponent.api.inbuilt.Key;
+import com.superyuuki.yuukomponent.api.inbuilt.stat.Key;
 import com.superyuuki.yuukomponent.api.inbuilt.stat.Stat;
 import com.superyuuki.yuukomponent.api.inbuilt.stat.StatObject;
 import com.superyuuki.yuukomponent.core.event.EventDispatcher;

@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api.plugin;
 
-import com.superyuuki.yuukomponent.api.behavior.BehaviorLoader;
+import com.superyuuki.yuukomponent.api.config.BehaviorLoader;
 
 import java.util.Collection;
 import java.util.Map;

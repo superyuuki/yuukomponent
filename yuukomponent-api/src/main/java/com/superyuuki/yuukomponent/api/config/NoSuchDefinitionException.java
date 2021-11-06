@@ -1,4 +1,4 @@
-package com.superyuuki.yuukomponent.api.component;
+package com.superyuuki.yuukomponent.api.config;
 
 import com.superyuuki.yuukomponent.api.YuuKomponentException;
 

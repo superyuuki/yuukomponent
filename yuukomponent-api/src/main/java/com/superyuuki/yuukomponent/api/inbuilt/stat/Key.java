@@ -1,4 +1,4 @@
-package com.superyuuki.yuukomponent.api.inbuilt;
+package com.superyuuki.yuukomponent.api.inbuilt.stat;
 
 import com.superyuuki.yuukomponent.api.inbuilt.stat.StatNotPresentException;
 import com.superyuuki.yuukomponent.api.inbuilt.stat.StatObject;
