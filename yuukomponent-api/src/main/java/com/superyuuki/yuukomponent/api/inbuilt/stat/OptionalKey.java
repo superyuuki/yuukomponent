@@ -1,4 +1,4 @@
-package com.superyuuki.yuukomponent.api.inbuilt;
+package com.superyuuki.yuukomponent.api.inbuilt.stat;
 
 public interface OptionalKey<T> {
 

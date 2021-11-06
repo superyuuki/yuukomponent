@@ -1,7 +1,7 @@
 package com.superyuuki.yuukomponent.example;
 
 import com.superyuuki.yuukomponent.api.inbuilt.stat.Stat;
-import com.superyuuki.yuukomponent.core.behavior.behavior.TypedBehavior;
+import com.superyuuki.yuukomponent.core.behavior.TypedBehavior;
 
 public class SomeBehavior implements TypedBehavior<SomeBehavior.Event> {
 

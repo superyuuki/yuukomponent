@@ -31,4 +31,11 @@ public interface ComponentStorage {
      */
     Component retrieve(UUID uuid) throws NoSuchElementException;
 
+    /**
+     * Gets whether component already exists
+     * @param uuid the id
+     * @return whether it exists
+     */
+    boolean present(UUID uuid);
+
 }

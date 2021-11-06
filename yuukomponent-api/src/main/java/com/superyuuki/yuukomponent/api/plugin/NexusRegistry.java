@@ -2,6 +2,6 @@ package com.superyuuki.yuukomponent.api.plugin;
 
 public interface NexusRegistry {
 
-    <T extends Archonexus> void retrieve(Class<T> clazz);
+    <T extends Archonexus> T retrieve(Class<T> clazz);
 
 }
