@@ -44,3 +44,5 @@ Status NO means not implemented yet, WIP is work in progress, and DONE is comple
  2. (Behavior Level) Reserved behaviors such as the built in Stat and Persistent behaviors
  3. (Behavior Level) User behaviors
  4. (Behavior Level) Forced insertion behaviors (These are behaviors defined by a plugin that are inserted into every component that exists. DO not use these if you do not have a reason you could tell the yuukomponent developer and not have him mock you)
+
+T
