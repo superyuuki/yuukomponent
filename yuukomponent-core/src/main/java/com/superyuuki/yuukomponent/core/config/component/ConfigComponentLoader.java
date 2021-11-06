@@ -1,8 +1,8 @@
-package com.superyuuki.yuukomponent.core.config;
+package com.superyuuki.yuukomponent.core.config.component;
 
 import com.superyuuki.yuukomponent.api.behavior.Behavior;
 import com.superyuuki.yuukomponent.api.component.Component;
-import com.superyuuki.yuukomponent.api.component.ComponentStorage;
+import com.superyuuki.yuukomponent.api.component.UUIDProvider;
 import com.superyuuki.yuukomponent.api.config.BehaviorLoader;
 import com.superyuuki.yuukomponent.api.config.ComponentLoader;
 import com.superyuuki.yuukomponent.api.config.data.DataSection;
@@ -14,19 +14,20 @@ import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
-public class ClConfig implements ComponentLoader {
+public class ConfigComponentLoader implements ComponentLoader {
 
-    private final ComponentStorage storage;
+    private final UUIDProvider provider;
 
     private final DataSection valueDefs;
     private final List<BehaviorLoader> behaviorDefs;
-    //TODO slot inclusion
 
-    public ClConfig(ComponentStorage storage, DataSection valueDefs, List<BehaviorLoader> behaviorDefs) {
-        this.storage = storage;
+    //TODO slot inclusion
+    public ConfigComponentLoader(UUIDProvider provider, DataSection valueDefs, List<BehaviorLoader> behaviorDefs) {
+        this.provider = provider;
         this.valueDefs = valueDefs;
         this.behaviorDefs = behaviorDefs;
     }
+
 
     @Override
     public Component load() {
@@ -35,16 +36,7 @@ public class ClConfig implements ComponentLoader {
 
     @Override
     public Component loadWithChildren(Collection<Component> forcedChildren) {
-        //TODO should this go elsewhere?
-        UUID uuid = UUID.randomUUID();
-
-        while (storage.present(uuid)) {
-            //This id is already present. This either represents sheer lottery-style chance collision, or more likely,
-            //forced collision due to some stupid server owner making a copy of an item manually and not through the api.
-            //We still support stupid server owners, so shift to a new uuid until we are able to insert this id to the container.
-
-            uuid = UUID.randomUUID();
-        }
+        UUID uuid = provider.provide();
 
         List<Behavior> make = new ArrayList<>();
 

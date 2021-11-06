@@ -12,7 +12,7 @@ import java.util.UUID;
  *
  * Think of it as a storage driver
  */
-public interface ComponentStorage {
+public interface ComponentStorage extends UUIDProvider {
 
     Collection<Component> components();
 
@@ -30,12 +30,5 @@ public interface ComponentStorage {
      * @return the component
      */
     Component retrieve(UUID uuid) throws NoSuchElementException;
-
-    /**
-     * Gets whether component already exists
-     * @param uuid the id
-     * @return whether it exists
-     */
-    boolean present(UUID uuid);
 
 }

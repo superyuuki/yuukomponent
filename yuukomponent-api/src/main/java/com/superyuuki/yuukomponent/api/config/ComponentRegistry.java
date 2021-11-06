@@ -1,5 +1,6 @@
 package com.superyuuki.yuukomponent.api.config;
 
+import com.superyuuki.yuukomponent.api.NoSuchDefinitionException;
 import com.superyuuki.yuukomponent.api.component.Component;
 
 import java.util.Map;
@@ -9,6 +10,6 @@ import java.util.Map;
  */
 public interface ComponentRegistry {
 
-    Component
+    ComponentLoader loader(String componentIdentifier) throws NoSuchDefinitionException;
 
 }

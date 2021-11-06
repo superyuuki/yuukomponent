@@ -3,6 +3,12 @@
 # YuuKomponent
 A component behavior modelling system
 
+# Objectives
+Make a heavily extensive, user and developer friendly component-behavior oriented proof of concept framework for the Node Component Behavior System design. Must avoid "arcane code" that it's contemporaries utilize.
+
+# Support
+Contact me at ``superyuuki#4413``, don't hesitate to dm me for feature requests or help setting up yuukomponent, but bug reports should go in issues and not in my discord client.
+
 # Dictionary
 - **Base/Core Features**: A feature set consisting of everything integral to what YuuKomponent is: Components, Structure, Behavior, Plugins, and Configuration.
 - **Inbuilt Features**: A feature set consisting of everything that can technically be implemented as Plugin features but are in practice coupled to the Base: Stats and Persistence.
@@ -44,5 +50,3 @@ Status NO means not implemented yet, WIP is work in progress, and DONE is comple
  2. (Behavior Level) Reserved behaviors such as the built in Stat and Persistent behaviors
  3. (Behavior Level) User behaviors
  4. (Behavior Level) Forced insertion behaviors (These are behaviors defined by a plugin that are inserted into every component that exists. DO not use these if you do not have a reason you could tell the yuukomponent developer and not have him mock you)
-
-T

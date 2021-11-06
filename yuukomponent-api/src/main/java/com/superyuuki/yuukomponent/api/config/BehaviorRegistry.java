@@ -1,12 +1,9 @@
 package com.superyuuki.yuukomponent.api.config;
 
-import com.superyuuki.yuukomponent.api.behavior.Behavior;
-import com.superyuuki.yuukomponent.api.config.NoSuchBehaviorException;
-
-import java.util.UUID;
+import com.superyuuki.yuukomponent.api.NoSuchBehaviorException;
 
 public interface BehaviorRegistry {
 
-    BehaviorLoader load(String behaviorIdentifier) throws NoSuchBehaviorException;
+    BehaviorLoader loader(String behaviorIdentifier) throws NoSuchBehaviorException;
 
 }
