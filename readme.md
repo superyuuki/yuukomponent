@@ -11,7 +11,19 @@ How do you (as a minecraft server owner) use it?
 3. Write a file.yml containing the items you want to invent to the definitions folder
 4. Reload the plugin
 
-A modular custom item with reusable behavior is as simple as 
+# Features
+
+Some cool features that yuukomponent allows you to implement are
+- **Truly** custom items that aren't bound to a single feature the developer adds
+- Custom items with attachments
+- Persistent items which save over restarts
+- Ease of use for developers so additional item features are as easy as two classes
+- Generators which can create user-defined trees of modular components with randomizer included
+
+# Example
+
+A modular custom item with reusable behavior is as simple as
+
 ```yaml
 Shotgun:
   Values:
@@ -27,15 +39,6 @@ Shotgun:
     - SingleComponentSlot<Bullet> 
     - SingleComponentSlot<Scope>
 ```
-
-# Features
-
-Some cool features that yuukomponent allows you to implement are
-- **Truly** custom items that aren't bound to a single feature the developer adds
-- Custom items with attachments
-- Persistent items which save over restarts
-- Ease of use for developers so additional item features are as easy as two classes
-- Generators which can create user-defined trees of modular components with randomizer included
 
 ## Contents
 
