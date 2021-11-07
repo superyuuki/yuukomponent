@@ -1,3 +1,5 @@
+# YuuKomponent
+
 **YuuKomponent** is an item framework that aims to solve the chore
 of writing custom item plugins which are persistent, modular, fast to write and fast to configure, and fit a user's exact needs.
 
@@ -25,6 +27,8 @@ Shotgun:
     - SingleComponentSlot<Bullet> 
     - SingleComponentSlot<Scope>
 ```
+
+# Features
 
 Some cool features that yuukomponent allows you to implement are
 - **Truly** custom items that aren't bound to a single feature the developer adds
