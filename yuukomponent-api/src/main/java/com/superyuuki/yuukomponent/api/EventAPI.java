@@ -12,20 +12,4 @@ public interface EventAPI {
      * @param event the event ID
      */
     void submit(Event event);
-
-    /**
-     * Submits a targeted event to a specific component. Only selects active components.
-     * @param identifier the identifier of the component
-     * @param event the event to submit
-     * @return true if the component was found and the event could be submitted, false if not
-     */
-    boolean submitTo(UUID identifier, Event event);
-
-    /**
-     * Submits a targeted event to a specific component. First checks active components and if not checks their children.
-     * @param identifier the identifier of the component
-     * @param event the event to submit
-     * @return true if the component was found and the event could be submitted, false if not
-     */
-    boolean submitChildren(UUID identifier, Event event);
 }

@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api.plugin;
 
-import com.superyuuki.yuukomponent.api.config.BehaviorLoader;
+import com.superyuuki.yuukomponent.api.blueprint.BehaviorSource;
 
 import java.util.Collection;
 import java.util.Map;
@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public interface Feature {
 
-    Map<String, BehaviorLoader> behaviors();
+    Map<String, BehaviorSource> behaviors();
     Collection<Archonexus> nexuses();
 
 }

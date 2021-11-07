@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api;
 
-import com.superyuuki.yuukomponent.api.config.BehaviorLoader;
+import com.superyuuki.yuukomponent.api.blueprint.BehaviorSource;
 
 public interface BehaviorAPI {
 
@@ -10,7 +10,7 @@ public interface BehaviorAPI {
      * @param behaviorId the id to assign to the behavior loader
      * @return true if successful, false if something already exists with that id
      */
-    boolean registerBehavior(String behaviorId, BehaviorLoader loader);
+    boolean registerBehavior(String behaviorId, BehaviorSource loader);
 
     /**
      * Checks whether a behavior exists

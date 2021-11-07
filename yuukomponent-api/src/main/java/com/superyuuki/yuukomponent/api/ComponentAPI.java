@@ -2,7 +2,7 @@ package com.superyuuki.yuukomponent.api;
 
 import com.superyuuki.yuukomponent.api.blueprint.Blueprint;
 import com.superyuuki.yuukomponent.api.component.Component;
-import com.superyuuki.yuukomponent.api.config.ComponentLoader;
+import com.superyuuki.yuukomponent.api.component.ComponentSource;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -21,7 +21,7 @@ public interface ComponentAPI {
      * @param loader the loader
      * @return the component
      */
-    Component createFromLoader(ComponentLoader loader);
+    Component createFromLoader(ComponentSource loader);
 
     /**
      * Creates a component from a blueprint

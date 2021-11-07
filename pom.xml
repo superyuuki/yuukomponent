@@ -13,6 +13,7 @@
         <module>yuukomponent-api</module>
         <module>yuukomponent-core</module>
         <module>yuukomponent-spigot</module>
+        <module>yuukomponent-dazzleconf-loader</module>
     </modules>
 
     <properties>
