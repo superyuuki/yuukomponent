@@ -11,8 +11,6 @@ How do you (as a minecraft server owner) use it?
 
 A modular custom item with reusable behavior is as simple as 
 ```yaml
-#Import YuuShotMe addon
-
 Shotgun:
   Values:
     Name: 'Shotgun'
@@ -24,28 +22,8 @@ Shotgun:
   Behaviors:
     - GunBehavior
   Slots:
-    - SingleComponentSlot<Bullet>
-      
-EnchantedBullet:
-  Values:
-    ProjectileDamage: x1
-  Tags:
-    - Bullet
-  Behaviors:
-    - ProjectileBehavior
-  Slots:
-    - ManyComponentSlot<Enchantment>[5]
-
-FlamingBullet:
-  Values:
-    ProjectileDamage: x1.2 # increase damage by 20%, 5 -> 6 damage
-    FlameDuration: +20
-  Tags:
-    - Bullet
-  Behaviors:
-    - ProjectileBehavior
-    - FlamingDamageBehavior
-
+    - SingleComponentSlot<Bullet> 
+    - SingleComponentSlot<Scope>
 ```
 
 Some cool features that yuukomponent allows you to implement are
