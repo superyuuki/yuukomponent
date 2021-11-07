@@ -62,14 +62,9 @@ You can get more addons [here](please host a hangar server).
 
 ## Replicating Other Plugins
 
-YuuKomponent is the end of all item other item plugins, whether they be rpg plugins, gun plugins, niche plugins 
-such as grappling hook plugins, even some custom enchantment plugins.
-
 These following diagrams show one way to replicate existing plugins within YuuKomponent.
 
 ### Replicating Crackshot
-
-> Depends on the following addons: YuuShotMe
 
 Here is YuuKomponent acting as a gun plugin.
 
@@ -90,7 +85,6 @@ AssaultRifle:
     - GunBehavior
   Slots:
     - SingleComponentSlot<Scope> #Can have a scope
-    - SingleComponentSlot<Magazine> #Can have a magazine
     - LockedSingleComponentSlot<Perk> #Can have a perk
 
 #Scope that zooms you in 2x
@@ -104,13 +98,6 @@ AssaultRifle:
   Behaviors:
     - ScopeBehavior
     - ItemDisplayBehavior #changes the displayed item to a scope
-  
-#Mag with 30 bullets
-30RoundMag:
-  Tags:
-    - Magazine
-  Slots:
-    - OrderedManyComponentSlot<Bullet>[30] #Hold 30 components with tag bullet. 
   
 #Perk that gives people fire at a 50% chance
 HellfirePerk:
@@ -142,18 +129,14 @@ AssaultRifleGenerator:
   Base: AssaultRifle #generates the base component as AssaultRifle defined in Components
   Orders:
     - ThenInsert: 2xScope
-    - ThenInsert: 30RoundMag
-      Orders:
-        - ThenInsert: SomeBullet #imagine i wrote a bullet def
     - ThenInsertRandom: (50>HellfirePerk, 50>VenomousPerk)
 
 ```
 
 What does this do?
 
-- We have an assault rifle which launches bullets at a velocity. It can have the following attached to it: A scope, a magazine, and a perk
+- We have an assault rifle which launches bullets at a velocity. It can have the following attached to it: A scope and a perk
 - We have a 2x scope which fits the Scope slot. The scope will zoom in by 200% (+2) on a right click.
-- We have a 30 round magazine which holds bullets
 - We have a perk which can only be inserted by Blueprints.
   - There is a Hellfire perk with a 50% chance the target will be lit on fire for 50 seconds.
   - There is a Poisonous perk that poisons the target for the default value of 1 minute.
@@ -166,7 +149,7 @@ Let's take a look at the Blueprint.
 The blueprints hold a Blueprint script called AssaultRifleGenerator. When this generator is activated, the following happens.
 
 - An assault rifle is created
-- A scope, magazine, and corresponding bullets are inserted
+- A scope and corresponding bullets are inserted
 - A perk is chosen randomly between the two existing perks and given to the gun.
 
 Let's say we want a pistol, which only has perks and bullets, but we want to reuse the
