@@ -2,9 +2,7 @@ name: TODO issue proc
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ master, initial-structure ]
 
 jobs:
   convert:
