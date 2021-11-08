@@ -3,6 +3,7 @@ package com.superyuuki.yuukomponent.core.component;
 import com.superyuuki.yuukomponent.api.behavior.Event;
 import com.superyuuki.yuukomponent.api.behavior.Behavior;
 import com.superyuuki.yuukomponent.api.component.Component;
+import com.superyuuki.yuukomponent.api.component.ComponentExecutionFailure;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -25,7 +26,7 @@ public class MappedComponent implements Component {
     }
 
     @Override
-    public void handle(Event event) {
+    public void handle(Event event) throws ComponentExecutionFailure {
         behavior.handle(event);
 
         for (Component component : children) {

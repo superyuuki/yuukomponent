@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core.config;
 
-import com.superyuuki.yuukomponent.api.blueprint.BehaviorSource;
+import com.superyuuki.yuukomponent.api.behavior.BehaviorSource;
 import com.superyuuki.yuukomponent.api.config.behavior.BehaviorRegistry;
 
 import java.util.Map;

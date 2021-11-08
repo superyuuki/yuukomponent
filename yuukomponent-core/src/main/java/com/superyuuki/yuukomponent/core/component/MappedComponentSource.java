@@ -1,12 +1,11 @@
 package com.superyuuki.yuukomponent.core.component;
 
 import com.superyuuki.yuukomponent.api.behavior.Behavior;
-import com.superyuuki.yuukomponent.api.blueprint.BehaviorSource;
+import com.superyuuki.yuukomponent.api.behavior.BehaviorSource;
 import com.superyuuki.yuukomponent.api.component.Component;
 import com.superyuuki.yuukomponent.api.component.ComponentSource;
 import com.superyuuki.yuukomponent.api.component.UUIDProvider;
 import com.superyuuki.yuukomponent.core.behavior.CombinantBehavior;
-import com.superyuuki.yuukomponent.core.component.MappedComponent;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api.config.behavior;
 
-import com.superyuuki.yuukomponent.api.blueprint.BehaviorSource;
+import com.superyuuki.yuukomponent.api.behavior.BehaviorSource;
 import com.superyuuki.yuukomponent.api.config.behavior.error.NoSuchBehaviorValueFailure;
 import com.superyuuki.yuukomponent.api.config.behavior.error.WrongTypeValueFailure;
 import com.superyuuki.yuukomponent.api.event.EventDispatcher;

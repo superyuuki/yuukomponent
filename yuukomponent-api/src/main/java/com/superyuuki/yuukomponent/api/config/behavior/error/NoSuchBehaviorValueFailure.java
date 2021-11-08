@@ -7,8 +7,8 @@ import java.util.Arrays;
 public class NoSuchBehaviorValueFailure extends BadConfigFailure {
 
 
-    public NoSuchBehaviorValueFailure(String component, String[] behavior) {
-        super(String.format("A component definition with the id: %s is missing behavior value(s): %s", component, Arrays.toString(behavior)));
+    public NoSuchBehaviorValueFailure(String component, String[] value) {
+        super(String.format("A component definition with the id: %s is missing behavior value(s): %s", component, Arrays.toString(value)));
     }
 
     @Override

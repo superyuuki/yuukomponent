@@ -14,6 +14,9 @@
         <module>yuukomponent-core</module>
         <module>yuukomponent-spigot</module>
         <module>yuukomponent-dazzleconf-loader</module>
+        <module>yuukomponent-example</module>
+        <module>yuukomponent-devel</module>
+        <module>yuukomponent-stat</module>
     </modules>
 
     <properties>

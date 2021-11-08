@@ -1,17 +1,22 @@
 package com.superyuuki.yuukomponent.core.event;
 
-import com.github.benmanes.caffeine.cache.Cache;
+import com.google.common.cache.Cache;
 import com.superyuuki.yuukomponent.api.behavior.Event;
 import com.superyuuki.yuukomponent.api.component.Component;
+import com.superyuuki.yuukomponent.api.component.ComponentExecutionFailure;
 import com.superyuuki.yuukomponent.api.component.ComponentStorage;
+import com.superyuuki.yuukomponent.api.component.error.CacheExecutionFailure;
 import com.superyuuki.yuukomponent.api.event.EventDispatcher;
 
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ExecutionException;
 
 public class BasicDispatcher implements EventDispatcher {
 
     private final ComponentStorage storage;
+
+    //TODO Make sure EventDispatcher's child linking queue is updated when components are moved between slots
     private final Cache<UUID, Component> subcomponentCache;
 
     public BasicDispatcher(ComponentStorage storage, Cache<UUID, Component> subcomponentCache) {
@@ -20,7 +25,7 @@ public class BasicDispatcher implements EventDispatcher {
     }
 
     @Override
-    public boolean dispatchChildInclusive(Event event, UUID uuid) {
+    public boolean dispatchChildInclusive(Event event, UUID uuid) throws ComponentExecutionFailure {
 
         Optional<Component> surfaceLevel = storage.retrieveOpt(uuid);
 
@@ -29,21 +34,27 @@ public class BasicDispatcher implements EventDispatcher {
             return true;
         }
 
-        Component nullableChild = subcomponentCache.get(uuid, id -> {
-            for (Component component : storage.components()) {
-                if (component.present(id)) {
-                    return component;
+        try {
+            Component nullableChild = subcomponentCache.get(uuid, () -> {
+                for (Component component : storage.components()) {
+                    if (component.present(uuid)) {
+                        return component;
+                    }
                 }
+
+                throw new NoKeyFailure(uuid.toString());
+            });
+
+            nullableChild.handle(event);
+
+            return true;
+        } catch (ExecutionException e) {
+            if (e.getCause() instanceof NoKeyFailure) {
+                return false;
             }
 
-            return null;
-        });
-
-        if (nullableChild != null) {
-            nullableChild.handle(event);
-            return true;
+            throw new CacheExecutionFailure(uuid, e.getCause());
         }
 
-        return false;
     }
 }

@@ -11,4 +11,24 @@
 
     <artifactId>yuukomponent-api</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>space.arim.omnibus</groupId>
+            <artifactId>omnibus</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>arim-mvn-lgpl3</id>
+            <url>https://mvn-repo.arim.space/lesser-gpl3/</url>
+        </repository>
+    </repositories>
+
 </project>

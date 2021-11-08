@@ -19,6 +19,10 @@ public interface ConfigurationSection {
     @ConfComments("The behaviors your component definition will use. Make sure all value requirements are met!")
     List<String> behaviors();
 
+    @ConfKey("tags")
+    @ConfComments("The tags to use")
+    List<String> tags();
+
     @ConfKey("values")
     @ConfComments("The values your application will use")
     Map<String, Object> values();

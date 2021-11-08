@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api.config;
 
-import com.superyuuki.yuukomponent.api.NoSuchDefinitionException;
+import com.superyuuki.yuukomponent.api.config.error.NoSuchDefinitionFailure;
 import com.superyuuki.yuukomponent.api.component.ComponentSource;
 
 /**
@@ -8,6 +8,6 @@ import com.superyuuki.yuukomponent.api.component.ComponentSource;
  */
 public interface ComponentRegistry {
 
-    ComponentSource loader(String componentIdentifier) throws NoSuchDefinitionException;
+    ComponentSource loader(String componentIdentifier) throws NoSuchDefinitionFailure;
 
 }

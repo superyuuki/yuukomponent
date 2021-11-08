@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api.inbuilt.persistent;
 
-import com.superyuuki.yuukomponent.api.YuuKomponentException;
+import com.superyuuki.yuukomponent.api.exception.YuuKomponentException;
 
 public class NoSuchPersistentException extends YuuKomponentException {
 

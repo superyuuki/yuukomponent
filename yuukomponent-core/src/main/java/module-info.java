@@ -1,12 +1,16 @@
+import com.superyuuki.yuukomponent.core.addon.internal.PathAddonLoaderSpi;
+
 module com.superyuuki.yuukomponent.core {
+    uses com.superyuuki.yuukomponent.api.addon.internal.AddonLoaderSpi;
 
     requires com.superyuuki.yuukomponent;
+    requires com.google.gson;
+    requires com.google.common;
 
-    exports com.superyuuki.yuukomponent.core.component;
-    exports com.superyuuki.yuukomponent.core.config;
-    exports com.superyuuki.yuukomponent.core.inbuilt.stat;
-    exports com.superyuuki.yuukomponent.core.inbuilt.stat.types;
-    exports com.superyuuki.yuukomponent.core.plugin;
+    exports com.superyuuki.yuukomponent.core.addon;
     exports com.superyuuki.yuukomponent.core.event;
+    exports com.superyuuki.yuukomponent.core.addon.internal;
+
+    provides com.superyuuki.yuukomponent.api.addon.internal.AddonLoaderSpi with PathAddonLoaderSpi;
 
 }

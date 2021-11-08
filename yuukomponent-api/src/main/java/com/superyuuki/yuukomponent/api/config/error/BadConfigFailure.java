@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api.config.error;
 
-import com.superyuuki.yuukomponent.api.YuuKomponentFailure;
+import com.superyuuki.yuukomponent.api.exception.YuuKomponentFailure;
 
 public abstract class BadConfigFailure extends YuuKomponentFailure {
 
