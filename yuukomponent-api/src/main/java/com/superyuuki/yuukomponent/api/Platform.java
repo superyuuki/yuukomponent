@@ -5,11 +5,13 @@ import com.superyuuki.yuukomponent.api.exception.ExceptionReader;
 import space.arim.omnibus.registry.Registry;
 
 import java.nio.file.Path;
+import java.util.concurrent.ExecutorService;
 
 public interface Platform {
 
-    Registry registry();
+    Registry registry(); //use as portal to other plugins. No yuukomp services exposed via registry.
     ExceptionReader reader();
+    ExecutorService executor();
 
     Path addonsFolder();
     Path configsFolder();

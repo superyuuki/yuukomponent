@@ -3,7 +3,7 @@ package com.superyuuki.yuukomponent.core.spi;
 import com.superyuuki.yuukomponent.api.Platform;
 import com.superyuuki.yuukomponent.api.addon.error.StartupFailure;
 import com.superyuuki.yuukomponent.api.addon.internal.AddonLoader;
-import com.superyuuki.yuukomponent.api.addon.internal.AddonLoaderSpi;
+import com.superyuuki.yuukomponent.api.addon.internal.spi.AddonLoaderSpi;
 import com.superyuuki.yuukomponent.core.addon.AddonSorter;
 
 import java.util.ArrayList;

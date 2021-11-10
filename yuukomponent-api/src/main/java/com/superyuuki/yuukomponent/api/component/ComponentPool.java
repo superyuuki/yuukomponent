@@ -11,8 +11,10 @@ import java.util.UUID;
  * Contract representing the storage of all components existent on a platform.
  *
  * Think of it as a storage driver
+ *
+ * TODO threaded, threadsafe, stronger contracts 
  */
-public interface ComponentStorage extends UUIDProvider {
+public interface ComponentPool {
 
     Collection<Component> components();
 

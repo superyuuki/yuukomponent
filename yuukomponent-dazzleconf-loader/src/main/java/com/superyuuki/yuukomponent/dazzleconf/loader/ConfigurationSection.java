@@ -13,7 +13,6 @@ import java.util.Map;
  */
 public interface ConfigurationSection {
 
-    //TODO add slots ;)
 
     @ConfKey("behaviors")
     @ConfComments("The behaviors your component definition will use. Make sure all value requirements are met!")

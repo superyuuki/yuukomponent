@@ -1,4 +1,4 @@
-import com.superyuuki.yuukomponent.api.addon.internal.AddonLoaderSpi;
+import com.superyuuki.yuukomponent.api.addon.internal.spi.AddonLoaderSpi;
 import com.superyuuki.yuukomponent.api.addon.processing.AddonProcessor;
 
 module com.superyuuki.yuukomponent {
@@ -25,6 +25,8 @@ module com.superyuuki.yuukomponent {
     exports com.superyuuki.yuukomponent.api.exception;
     exports com.superyuuki.yuukomponent.api.component.error;
     exports com.superyuuki.yuukomponent.api.behavior;
+    exports com.superyuuki.yuukomponent.api.addon.internal.spi;
+    exports com.superyuuki.yuukomponent.api.config.spi;
 
     uses AddonLoaderSpi;
 
