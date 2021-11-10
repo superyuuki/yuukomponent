@@ -1,0 +1,1 @@
+Spigot platform launcher for yuukomponent

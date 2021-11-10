@@ -8,17 +8,29 @@
     <artifactId>yuukomponent</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
+
     <modules>
-        <module>yuukomponent-api-constants</module>
-        <module>yuukomponent-api-design1</module>
-        <module>yuukomponent-ideal</module>
+        <module>yuukomponent-api</module>
+        <module>yuukomponent-core</module>
+        <module>yuukomponent-spigot</module>
+        <module>yuukomponent-dazzleconf-loader</module>
+        <module>yuukomponent-example</module>
+        <module>yuukomponent-devel</module>
+        <module>yuukomponent-stat</module>
     </modules>
 
     <properties>
-        <compiler.version>17</compiler.version>
+        <compiler.version>11</compiler.version>
 
         <maven.compiler.source>${compiler.version}</maven.compiler.source>
         <maven.compiler.target>${compiler.version}</maven.compiler.target>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/superyuuki/yuukomponent</url>
+        </repository>
+    </distributionManagement>
 
 </project>
