@@ -1,5 +1,6 @@
 package com.superyuuki.yuukomponent.api;
 
+import com.superyuuki.yuukomponent.api.addon.AddonManager;
 import com.superyuuki.yuukomponent.api.addon.error.NoSuchBackingPlatformException;
 import com.superyuuki.yuukomponent.api.exception.ExceptionReader;
 import space.arim.omnibus.registry.Registry;
@@ -9,7 +10,7 @@ import java.util.concurrent.ExecutorService;
 
 public interface Platform {
 
-    Registry registry(); //use as portal to other plugins. No yuukomp services exposed via registry.
+    AddonManager registry(); //use as portal to other addons. No yuukomp services exposed via registry.
     ExceptionReader reader();
     ExecutorService executor();
 

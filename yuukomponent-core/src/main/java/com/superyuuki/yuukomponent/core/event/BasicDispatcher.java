@@ -4,23 +4,21 @@ import com.google.common.cache.Cache;
 import com.superyuuki.yuukomponent.api.behavior.Event;
 import com.superyuuki.yuukomponent.api.component.Component;
 import com.superyuuki.yuukomponent.api.component.ComponentExecutionFailure;
-import com.superyuuki.yuukomponent.api.component.ComponentPool;
-import com.superyuuki.yuukomponent.api.component.error.CacheExecutionFailure;
+import com.superyuuki.yuukomponent.api.component.ComponentDispatcher;
 import com.superyuuki.yuukomponent.api.event.EventDispatcher;
 
 import java.util.Optional;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 public class BasicDispatcher implements EventDispatcher {
 
-    private final ComponentPool storage;
+    private final ComponentDispatcher storage;
 
     //TODO Make sure EventDispatcher's child linking queue is updated when components are moved between slots
     private final Cache<UUID, Component> subcomponentCache;
 
-    public BasicDispatcher(ComponentPool storage, Cache<UUID, Component> subcomponentCache) {
+    public BasicDispatcher(ComponentDispatcher storage, Cache<UUID, Component> subcomponentCache) {
         this.storage = storage;
         this.subcomponentCache = subcomponentCache;
     }

@@ -3,7 +3,7 @@ package com.superyuuki.yuukomponent.example;
 import com.superyuuki.yuukomponent.api.behavior.Behavior;
 import com.superyuuki.yuukomponent.api.behavior.BehaviorSource;
 import com.superyuuki.yuukomponent.api.inbuilt.stat.Stat;
-import com.superyuuki.yuukomponent.api.behavior.TypedBehavior;
+import com.superyuuki.yuukomponent.api.behavior.types.AsyncBehavior;
 import com.superyuuki.yuukomponent.api.event.EventDispatcher;
 import com.superyuuki.yuukomponent.stat.types.IntegerStat;
 
@@ -28,6 +28,6 @@ public class SomeBehaviorSource implements BehaviorSource {
         Stat<Integer> range = new IntegerStat(dispatcher, uuid, key, defaultDamage); //range starts off as 5 if called by this behavior
         //e.g. if a weapon with base 0 modifiers +2, x5, +5 would give you 2x5+5 = 15, this would give you 7x5+5 = 40 for this behavior calc only
 
-        return new TypedBehavior.Adapter<>(new SomeBehavior(someConfigValue, damage, range), SomeBehavior.Event.class);
+        return new AsyncBehavior.Adapter<>(new SomeBehavior(someConfigValue, damage, range), SomeBehavior.Event.class);
     }
 }

@@ -1,15 +1,11 @@
 package com.superyuuki.yuukomponent.api.behavior;
 
-import com.superyuuki.yuukomponent.api.behavior.Behavior;
-import com.superyuuki.yuukomponent.api.config.behavior.error.BehaviorLoadFailure;
-
-import java.util.UUID;
-
-/**
- * Creates behaviors
- */
 public interface BehaviorSource {
 
-    Behavior instantiate(UUID id);
+    /**
+     * Create a new behavior of correct type
+     * @return the behavior
+     */
+    Mutator birth();
 
 }

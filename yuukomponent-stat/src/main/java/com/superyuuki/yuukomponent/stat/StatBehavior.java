@@ -1,11 +1,11 @@
 package com.superyuuki.yuukomponent.stat;
 
-import com.superyuuki.yuukomponent.api.behavior.TypedBehavior;
+import com.superyuuki.yuukomponent.api.behavior.types.AsyncBehavior;
 
 import java.util.Map;
 import java.util.function.UnaryOperator;
 
-public class StatBehavior implements TypedBehavior<StatCalculationEvent<?>> {
+public class StatBehavior implements AsyncBehavior<StatCalculationEvent<?>> {
 
     private final Map<String, UnaryOperator<?>> operatorMap;
 

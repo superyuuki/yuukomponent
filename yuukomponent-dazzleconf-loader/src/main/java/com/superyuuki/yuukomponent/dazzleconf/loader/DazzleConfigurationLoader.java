@@ -1,6 +1,5 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader;
 
-import com.superyuuki.yuukomponent.api.component.UUIDProvider;
 import com.superyuuki.yuukomponent.api.config.ComponentRegistry;
 import com.superyuuki.yuukomponent.api.config.ConfigurationLoader;
 import com.superyuuki.yuukomponent.api.config.behavior.BehaviorRegistry;

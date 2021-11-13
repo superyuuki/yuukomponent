@@ -1,9 +1,9 @@
 package com.superyuuki.yuukomponent.example;
 
 import com.superyuuki.yuukomponent.api.inbuilt.stat.Stat;
-import com.superyuuki.yuukomponent.api.behavior.TypedBehavior;
+import com.superyuuki.yuukomponent.api.behavior.types.AsyncBehavior;
 
-public class SomeBehavior implements TypedBehavior<SomeBehavior.Event> {
+public class SomeBehavior implements AsyncBehavior<SomeBehavior.Event> {
 
     private int pretendPersistent; //just to simulate loading
     private final Stat<Integer> damage;

@@ -2,7 +2,6 @@ package com.superyuuki.yuukomponent.dazzleconf.loader;
 
 import com.superyuuki.yuukomponent.api.behavior.BehaviorSource;
 import com.superyuuki.yuukomponent.api.component.ComponentSource;
-import com.superyuuki.yuukomponent.api.component.UUIDProvider;
 import com.superyuuki.yuukomponent.api.config.behavior.BehaviorLoader;
 import com.superyuuki.yuukomponent.api.config.behavior.BehaviorRegistry;
 import com.superyuuki.yuukomponent.api.config.behavior.DataSection;
@@ -10,7 +9,6 @@ import com.superyuuki.yuukomponent.api.config.behavior.error.NoSuchBehaviorFailu
 import com.superyuuki.yuukomponent.api.config.behavior.error.NoSuchBehaviorValueFailure;
 import com.superyuuki.yuukomponent.api.config.behavior.error.WrongTypeValueFailure;
 import com.superyuuki.yuukomponent.api.event.EventDispatcher;
-import com.superyuuki.yuukomponent.core.component.MappedComponentSource;
 
 import java.util.*;
 

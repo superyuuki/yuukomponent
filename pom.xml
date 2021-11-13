@@ -17,6 +17,8 @@
         <module>yuukomponent-example</module>
         <module>yuukomponent-devel</module>
         <module>yuukomponent-stat</module>
+        <module>yuukomponent-sql</module>
+        <module>yuukomponent-persistence</module>
     </modules>
 
     <properties>
@@ -25,6 +27,21 @@
         <maven.compiler.source>${compiler.version}</maven.compiler.source>
         <maven.compiler.target>${compiler.version}</maven.compiler.target>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>space.arim.omnibus</groupId>
+            <artifactId>omnibus</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>arim-mvn-lgpl3</id>
+            <url>https://mvn-repo.arim.space/lesser-gpl3/</url>
+        </repository>
+    </repositories>
 
     <distributionManagement>
         <repository>
