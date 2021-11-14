@@ -7,9 +7,9 @@ of writing custom item plugins which are persistent, modular, fast to write and 
 How do you (as a minecraft server owner) use it?
 
 1. Download YuuKomponent to your server's plugins folder
-2. Install a behavior addon to YuuKomponent's addons folder to add features
+2. Install a behavior addonContext to YuuKomponent's addons folder to add features
 3. Write a file.yml containing the items you want to invent to the definitions folder
-4. Reload the plugin
+4. Reload the addonContext
 
 # Features
 
@@ -66,7 +66,7 @@ These following diagrams show one way to replicate existing plugins within YuuKo
 
 ### Replicating Crackshot
 
-Here is YuuKomponent acting as a gun plugin.
+Here is YuuKomponent acting as a gun addonContext.
 
 In your components file
 
@@ -232,7 +232,7 @@ After this you should be good to go.
 
 To make a behavior you need a behavior source, the actual behavior, and a behavior loader if you want it to work with configs (which you do).
 
-You will need to insert these things into YuuKomponent via an addon or a plugin.
+You will need to insert these things into YuuKomponent via an addonContext or a addonContext.
 
 todo
 

@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api.component.error;
 
-import com.superyuuki.yuukomponent.api.exception.YuuKomponentException;
+import com.superyuuki.yuukomponent.api.exception.Failures;
 import com.superyuuki.yuukomponent.api.exception.YuuKomponentFailure;
 
 import java.util.UUID;
@@ -12,6 +12,6 @@ public class MissingRootFailure extends YuuKomponentFailure {
 
     @Override
     public String solution() {
-        return Const.GENERIC_SOLUTION;
+        return Failures.GENERIC_BAD_SCHEMA_CUR;
     }
 }

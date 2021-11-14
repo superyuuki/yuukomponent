@@ -4,7 +4,7 @@ import com.google.common.graph.Graph;
 import com.google.common.graph.GraphBuilder;
 import com.google.common.graph.MutableGraph;
 import com.superyuuki.yuukomponent.api.addon.Feature;
-import com.superyuuki.yuukomponent.api.addon.error.StartupFailure;
+import com.superyuuki.yuukomponent.api.StartupFailure;
 import com.superyuuki.yuukomponent.api.addon.internal.AddonLoader;
 import com.superyuuki.yuukomponent.api.addon.internal.Description;
 import com.superyuuki.yuukomponent.core.addon.error.DuplicateExportFailure;

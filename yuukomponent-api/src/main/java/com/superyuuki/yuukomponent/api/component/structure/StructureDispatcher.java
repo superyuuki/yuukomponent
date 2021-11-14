@@ -7,6 +7,9 @@ import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
+/**
+ * Sequential structure dispatcher. Atomic synchronous modifications to passed events are permitted.
+ */
 public interface StructureDispatcher {
 
     <T extends Event> CentralisedFuture<?> dispatch(UUID uuid, Supplier<T> event);

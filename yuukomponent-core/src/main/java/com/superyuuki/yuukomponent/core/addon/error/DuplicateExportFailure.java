@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core.addon.error;
 
-import com.superyuuki.yuukomponent.api.addon.error.StartupFailure;
+import com.superyuuki.yuukomponent.api.StartupFailure;
 
 public class DuplicateExportFailure extends StartupFailure {
     public DuplicateExportFailure(String plugin1, String plugin2, String feature) {

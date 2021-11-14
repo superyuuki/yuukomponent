@@ -19,6 +19,9 @@
         <module>yuukomponent-stat</module>
         <module>yuukomponent-sql</module>
         <module>yuukomponent-persistence</module>
+        <module>yuukomponent-addonContext</module>
+        <module>yuuaddons</module>
+        <module>yuukomponent-addons</module>
     </modules>
 
     <properties>

@@ -3,7 +3,7 @@ package com.superyuuki.yuukomponent.core.addon.internal;
 import com.superyuuki.yuukomponent.api.addon.Addon;
 import com.superyuuki.yuukomponent.api.addon.error.AddonIoFailure;
 import com.superyuuki.yuukomponent.api.addon.error.ReflectiveFailure;
-import com.superyuuki.yuukomponent.api.addon.error.StartupFailure;
+import com.superyuuki.yuukomponent.api.StartupFailure;
 import com.superyuuki.yuukomponent.api.addon.internal.AddonLoader;
 import com.superyuuki.yuukomponent.api.addon.internal.CustomClassLoader;
 import com.superyuuki.yuukomponent.api.addon.internal.Description;
@@ -31,7 +31,7 @@ public class JavaAddonLoader implements AddonLoader {
     public Addon load() throws StartupFailure {
         try {
             URL url = path.toUri().toURL();
-            JavaDescriptionClassLoader loader = AccessController.doPrivileged((PrivilegedAction<JavaDescriptionClassLoader>) () -> new JavaDescriptionClassLoader(new URL[]{url}, loaders));
+            JavaDescriptionClassLoader loader = AccessController.doPrivileged((PrivilegedAction<JavaDescriptionClassLoader>) () -> new JavaDescriptionClassLoader(new URL[]{url}, customClassLoaders));
             customClassLoaders.add(loader);
 
             Class<?> clazz = loader.loadClass(description.mainClassName());

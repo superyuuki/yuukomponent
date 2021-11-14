@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core.component.structure.dispatcher;
 
-import com.superyuuki.yuukomponent.api.Futures;
+import com.superyuuki.yuukomponent.api.ConstFutures;
 import com.superyuuki.yuukomponent.api.behavior.Event;
 import com.superyuuki.yuukomponent.api.component.ComponentDispatcher;
 import com.superyuuki.yuukomponent.api.component.structure.MonoStructurePool;
@@ -32,7 +32,7 @@ public class ChainStructDispatch extends AbstractStructDispatch {
 
             Queue<UUID> queue = new ArrayDeque<>(Arrays.asList(ids));
 
-            CentralisedFuture<?> dispatchOne = factory.completedFuture(Futures.COMPLETED);
+            CentralisedFuture<?> dispatchOne = factory.completedFuture(ConstFutures.COMPLETED);
             while (!queue.isEmpty()) {
                 CentralisedFuture<?> finalDispatchOne = dispatchOne;
                 dispatchOne = dispatchOne.thenCompose(ignored -> dispatcher.dispatch(queue.remove(), eventObject, finalDispatchOne));

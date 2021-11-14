@@ -2,7 +2,7 @@ package com.superyuuki.yuukomponent.core.addon.internal;
 
 import com.google.gson.Gson;
 import com.superyuuki.yuukomponent.api.addon.error.InvalidAddonFileFailure;
-import com.superyuuki.yuukomponent.api.addon.error.StartupFailure;
+import com.superyuuki.yuukomponent.api.StartupFailure;
 import com.superyuuki.yuukomponent.api.addon.internal.Description;
 import com.superyuuki.yuukomponent.api.addon.internal.DescriptionLoader;
 import com.superyuuki.yuukomponent.api.addon.processing.SerializedDescription;
