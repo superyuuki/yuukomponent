@@ -4,10 +4,10 @@ import com.superyuuki.yuukomponent.api.addon.Addon;
 import com.superyuuki.yuukomponent.api.addon.AddonContext;
 import com.superyuuki.yuukomponent.api.addon.AddonDescription;
 import com.superyuuki.yuukomponent.api.StartupFailure;
-import com.superyuuki.yuukomponent.api.config.ConfigurationLoaderFeature;
-import com.superyuuki.yuukomponent.api.transactional.TransactionSourceFeature;
+import com.superyuuki.yuukomponent.api.behavior.RegistryEntrypoint;
+import com.superyuuki.yuukomponent.api.component.TransactionSource;
 import com.superyuuki.yuukomponent.dazzleconf.loader.Extractor;
-import com.superyuuki.yuukomponent.sql.transaction.SQLSourceFeature;
+import com.superyuuki.yuukomponent.sql.transaction.SQLSource;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import space.arim.jdbcaesar.JdbCaesarBuilder;
@@ -18,8 +18,8 @@ import space.arim.jdbcaesar.JdbCaesarBuilder;
         version = "0.0.1-SNAPSHOT",
         description = "SQL binding for YuuKomponent",
         author = "Yuuki",
-        exports = TransactionSourceFeature.class,
-        depends = ConfigurationLoaderFeature.class
+        exports = TransactionSource.class,
+        depends = RegistryEntrypoint.class
 )
 public class SQLAddonContext implements Addon {
 
@@ -41,8 +41,8 @@ public class SQLAddonContext implements Addon {
         source = new HikariDataSource(hikariConfig);
 
         context.manager().register(
-                TransactionSourceFeature.class,
-                new SQLSourceFeature(
+                TransactionSource.class,
+                new SQLSource(
                         context.factory(),
                         new JdbCaesarBuilder().dataSource(source).build()
                 )

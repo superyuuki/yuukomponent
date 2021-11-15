@@ -1,7 +1,7 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader;
 
-import com.superyuuki.yuukomponent.api.config.error.BadConfigFailure;
-import com.superyuuki.yuukomponent.api.config.error.DuplicateDefinitionFailure;
+import com.superyuuki.yuukomponent.api.behavior.error.BadConfigFailure;
+import com.superyuuki.yuukomponent.dazzleconf.loader.error.DuplicateDefinitionFailure;
 
 import java.io.IOException;
 import java.nio.file.Path;

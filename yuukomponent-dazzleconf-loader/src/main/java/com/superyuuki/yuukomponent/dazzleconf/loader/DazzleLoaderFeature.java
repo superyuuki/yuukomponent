@@ -1,16 +1,15 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader;
 
-import com.superyuuki.yuukomponent.api.config.ComponentRegistry;
-import com.superyuuki.yuukomponent.api.config.ConfigurationLoaderFeature;
-import com.superyuuki.yuukomponent.api.config.behavior.BehaviorRegistry;
-import com.superyuuki.yuukomponent.api.config.error.BadConfigFailure;
+import com.superyuuki.yuukomponent.api.behavior.ComponentRegistry;
+import com.superyuuki.yuukomponent.api.behavior.RegistryEntrypoint;
+import com.superyuuki.yuukomponent.api.behavior.error.BadConfigFailure;
 import com.superyuuki.yuukomponent.api.event.EventDispatcher;
 
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Map;
 
-public class DazzleLoaderFeature implements ConfigurationLoaderFeature {
+public class DazzleLoaderFeature implements RegistryEntrypoint {
 
     private final Path[] files;
     private final UUIDProvider provider;

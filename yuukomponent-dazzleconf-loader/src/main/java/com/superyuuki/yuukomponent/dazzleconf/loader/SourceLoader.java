@@ -2,12 +2,10 @@ package com.superyuuki.yuukomponent.dazzleconf.loader;
 
 import com.superyuuki.yuukomponent.api.behavior.BehaviorSource;
 import com.superyuuki.yuukomponent.api.component.ComponentSource;
-import com.superyuuki.yuukomponent.api.config.behavior.BehaviorLoader;
-import com.superyuuki.yuukomponent.api.config.behavior.BehaviorRegistry;
-import com.superyuuki.yuukomponent.api.config.behavior.DataSection;
-import com.superyuuki.yuukomponent.api.config.behavior.error.NoSuchBehaviorFailure;
-import com.superyuuki.yuukomponent.api.config.behavior.error.NoSuchBehaviorValueFailure;
-import com.superyuuki.yuukomponent.api.config.behavior.error.WrongTypeValueFailure;
+import com.superyuuki.yuukomponent.api.behavior.ConfSection;
+import com.superyuuki.yuukomponent.dazzleconf.loader.error.NoSuchBehaviorFailure;
+import com.superyuuki.yuukomponent.api.behavior.error.NoSuchBehaviorValueFailure;
+import com.superyuuki.yuukomponent.api.behavior.error.WrongTypeValueFailure;
 import com.superyuuki.yuukomponent.api.event.EventDispatcher;
 
 import java.util.*;
@@ -35,14 +33,14 @@ public class SourceLoader {
 
             List<BehaviorSource> behaviors = new ArrayList<>();
 
-            DataSection dataSection = new DazzleSection(componentId, section.values());
+            ConfSection confSection = new DazzleConfSection(componentId, section.values());
 
             for (String behaviorId : section.behaviors()) {
                 Optional<BehaviorLoader> loader = registry.loader(behaviorId);
 
                 if (loader.isEmpty()) throw new NoSuchBehaviorFailure(componentId, behaviorId);
 
-                behaviors.add(loader.get().load(dataSection, dispatcher));
+                behaviors.add(loader.get().load(confSection, dispatcher));
             }
 
             ComponentSource loader = new MappedComponentSource(uuidProvider, behaviors);

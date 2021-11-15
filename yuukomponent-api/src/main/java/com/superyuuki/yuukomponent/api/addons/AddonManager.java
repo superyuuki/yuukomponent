@@ -13,8 +13,6 @@ public interface AddonManager {
     <T extends Addon> T getAddon(Class<T> addonClass) throws NoSuchAddonFeatureFailure, TooManyImplementingAddonsFailure;
     <T extends Addon> List<T> getAllAddons(Class<T> addonClass);
 
-    <T extends Addon> void addAddon(String addonName, Class<T> addonType, T addon);
-
     boolean addonExists(String pluginName);
     <T extends Addon> boolean addonExists(Class<T> pluginClass);
 

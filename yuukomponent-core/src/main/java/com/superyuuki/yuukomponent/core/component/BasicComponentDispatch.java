@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core.component;
 
-import com.superyuuki.yuukomponent.api.ConstFutures;
+import com.superyuuki.yuukomponent.api.Futures;
 import com.superyuuki.yuukomponent.api.behavior.Event;
 import com.superyuuki.yuukomponent.api.component.ComponentDispatcher;
 import space.arim.omnibus.util.concurrent.CentralisedFuture;
@@ -18,7 +18,7 @@ public class BasicComponentDispatch implements ComponentDispatcher {
 
     @Override
     public <T extends Event> CentralisedFuture<?> dispatch(UUID uuid, T event) {
-        return dispatch(uuid, event, factory.completedFuture(ConstFutures.COMPLETED));
+        return dispatch(uuid, event, factory.completedFuture(Futures.COMPLETED));
     }
 
     @Override

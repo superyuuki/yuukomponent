@@ -19,8 +19,8 @@ public @interface AddonContext {
     String version();
 
     //TODO Implement semver checking
-    String platformVersion();
+    String platformVersion() default "not-implemented";
 
-    Class<? extends Addon>[] dependencies();
+    Class<? extends Addon>[] dependencies() default {};
 
 }

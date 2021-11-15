@@ -3,7 +3,7 @@ package com.superyuuki.yuukomponent.core.component;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.superyuuki.yuukomponent.api.component.Component;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchComponentException;
-import com.superyuuki.yuukomponent.api.config.error.NoSuchDefinitionException;
+import com.superyuuki.yuukomponent.api.component.error.NoSuchDefinitionException;
 import org.checkerframework.checker.nullness.qual.PolyNull;
 
 import java.util.UUID;

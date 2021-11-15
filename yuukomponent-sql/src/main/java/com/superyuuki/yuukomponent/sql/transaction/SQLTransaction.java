@@ -1,7 +1,7 @@
 package com.superyuuki.yuukomponent.sql.transaction;
 
-import com.superyuuki.yuukomponent.api.transactional.NoSuchTxPropertyException;
-import com.superyuuki.yuukomponent.api.transactional.Transaction;
+import com.superyuuki.yuukomponent.api.component.error.NoSuchTxPropertyException;
+import com.superyuuki.yuukomponent.api.component.Transaction;
 import space.arim.jdbcaesar.transact.TransactionQuerySource;
 
 public class SQLTransaction implements Transaction {
