@@ -1,7 +1,6 @@
 package com.superyuuki.yuukomponent.sql.transaction.func;
 
 import com.github.benmanes.caffeine.cache.Cache;
-import com.superyuuki.yuukomponent.api.component.Transaction;
 
 import java.util.List;
 import java.util.Optional;

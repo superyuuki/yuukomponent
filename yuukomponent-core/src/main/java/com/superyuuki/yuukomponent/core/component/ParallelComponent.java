@@ -1,7 +1,6 @@
 package com.superyuuki.yuukomponent.core.component;
 
 import com.superyuuki.yuukomponent.api.behavior.Event;
-import com.superyuuki.yuukomponent.api.behavior.Mutator;
 import com.superyuuki.yuukomponent.api.component.Component;
 import space.arim.omnibus.util.concurrent.CentralisedFuture;
 import space.arim.omnibus.util.concurrent.FactoryOfTheFuture;

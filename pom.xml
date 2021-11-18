@@ -22,6 +22,7 @@
         <module>yuukomponent-addonContext</module>
         <module>yuuaddons</module>
         <module>yuukomponent-addons</module>
+        <module>yuukomponent-spigot</module>
     </modules>
 
     <properties>

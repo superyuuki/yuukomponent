@@ -14,10 +14,11 @@
     <dependencies>
         <dependency>
             <groupId>com.superyuuki</groupId>
-            <artifactId>yuukomponent-api</artifactId>
+            <artifactId>yuukomponent-core</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>space.arim.dazzleconf</groupId>
             <artifactId>dazzleconf-ext-snakeyaml</artifactId>

@@ -1,15 +1,13 @@
 package com.superyuuki.yuukomponent.api.component;
 
+import com.superyuuki.yuukomponent.api.behavior.Behavior;
 import com.superyuuki.yuukomponent.api.behavior.Event;
-import space.arim.omnibus.util.concurrent.CentralisedFuture;
 
 /**
- * Workspace for behaviors
- *
- * May be deleted in a future PR as it implements the same behavior as a.. uh.. Behavior.
+ * Marker interface for loaded behavior
  */
-public interface Component {
+public interface Component extends Behavior {
 
-    <T extends Event> CentralisedFuture<?> compute(T event, CentralisedFuture<?> top);
+    void handle(Event event);
 
 }

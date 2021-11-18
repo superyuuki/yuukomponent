@@ -20,6 +20,7 @@ public @interface AddonContext {
 
     //TODO Implement semver checking
     String platformVersion() default "not-implemented";
+    String yuuKomponentVersion() default "not-implemented";
 
     Class<? extends Addon>[] dependencies() default {};
 

@@ -1,13 +1,14 @@
 package com.superyuuki.yuukomponent.api.component.error;
 
 import com.superyuuki.yuukomponent.api.exception.Failures;
+import com.superyuuki.yuukomponent.api.exception.YuuKomponentException;
 import com.superyuuki.yuukomponent.api.exception.YuuKomponentFailure;
 
 import java.util.UUID;
 
-public class MissingRootUpdateFailure extends YuuKomponentFailure {
-    public MissingRootUpdateFailure(UUID toReplace, UUID toInsert) {
-        super(String.format("Missing a root component for component: %s when trying to replace %s with component: %s", toReplace, toReplace, toInsert));
+public class MissingRootException extends YuuKomponentException {
+    public MissingRootException(UUID uuid) {
+        super(String.format("Missing a root-child mapping for child component: %s", uuid));
     }
 
     @Override

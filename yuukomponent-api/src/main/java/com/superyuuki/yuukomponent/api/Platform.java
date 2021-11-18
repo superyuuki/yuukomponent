@@ -6,6 +6,7 @@ import java.util.concurrent.ExecutorService;
 
 public interface Platform {
 
+    String version();
     FactoryOfTheFuture factory();
     ExecutorService service();
 

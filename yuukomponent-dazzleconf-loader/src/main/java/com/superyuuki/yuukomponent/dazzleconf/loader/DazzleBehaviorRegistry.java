@@ -1,16 +1,16 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader;
 
-import com.superyuuki.yuukomponent.api.behavior.ComponentRegistry;
+import com.superyuuki.yuukomponent.api.behavior.BehaviorRegistry;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchDefinitionException;
 import com.superyuuki.yuukomponent.api.component.Component;
 
 import java.util.Map;
 
-public class DazzleComponentRegistry implements ComponentRegistry {
+public class DazzleBehaviorRegistry implements BehaviorRegistry {
 
     private final Map<String, ComponentSource> sourceMap;
 
-    public DazzleComponentRegistry(Map<String, ComponentSource> sourceMap) {
+    public DazzleBehaviorRegistry(Map<String, ComponentSource> sourceMap) {
         this.sourceMap = sourceMap;
     }
 

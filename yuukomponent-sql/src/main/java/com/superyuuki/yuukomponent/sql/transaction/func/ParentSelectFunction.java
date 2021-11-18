@@ -1,6 +1,5 @@
 package com.superyuuki.yuukomponent.sql.transaction.func;
 
-import com.superyuuki.yuukomponent.api.component.Transaction;
 import space.arim.jdbcaesar.transact.TransactionQuerySource;
 import space.arim.omnibus.util.UUIDUtil;
 

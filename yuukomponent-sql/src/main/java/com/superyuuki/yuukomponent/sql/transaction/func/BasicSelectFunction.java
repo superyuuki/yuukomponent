@@ -1,6 +1,5 @@
 package com.superyuuki.yuukomponent.sql.transaction.func;
 
-import com.superyuuki.yuukomponent.api.component.Transaction;
 import space.arim.jdbcaesar.transact.TransactionQuerySource;
 import space.arim.omnibus.util.UUIDUtil;
 
@@ -20,10 +19,7 @@ public class BasicSelectFunction implements Function<UUID, List<UUID>> {
     public List<UUID> apply(UUID select) {
         return transaction
                 .property(TransactionQuerySource.class)
-                .query("SELECT child FROM components_relations WHERE parent = ?")
-                .params(select)
-                .listResult(element -> UUIDUtil.fromByteArray(element.getBytes("child")))
-                .execute();
+
                 /*.singleResult(set -> {
                     List<UUID> uuids = new ArrayList<>();
 

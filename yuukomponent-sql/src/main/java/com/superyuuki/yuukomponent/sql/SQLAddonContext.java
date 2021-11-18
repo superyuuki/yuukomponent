@@ -4,8 +4,6 @@ import com.superyuuki.yuukomponent.api.addon.Addon;
 import com.superyuuki.yuukomponent.api.addon.AddonContext;
 import com.superyuuki.yuukomponent.api.addon.AddonDescription;
 import com.superyuuki.yuukomponent.api.StartupFailure;
-import com.superyuuki.yuukomponent.api.behavior.RegistryEntrypoint;
-import com.superyuuki.yuukomponent.api.component.TransactionSource;
 import com.superyuuki.yuukomponent.dazzleconf.loader.Extractor;
 import com.superyuuki.yuukomponent.sql.transaction.SQLSource;
 import com.zaxxer.hikari.HikariConfig;
