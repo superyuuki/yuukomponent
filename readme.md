@@ -66,6 +66,8 @@ These following diagrams show one way to replicate existing plugins within YuuKo
 
 ### Replicating Crackshot
 
+*This is all out of date since there is now a significant intention to shift every feature to a module and every item feature to a behavior: slots and tags will be behaviors.
+
 Here is YuuKomponent acting as a gun addonContext.
 
 In your components file
