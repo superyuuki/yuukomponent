@@ -1,1 +1,0 @@
-i miss not being lazy and actually trying to implement eo in my projects
