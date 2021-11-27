@@ -2,7 +2,6 @@ package com.superyuuki.yuukomponent.dazzleconf.loader;
 
 import com.superyuuki.yuukomponent.api.behavior.BehaviorRegistry;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchDefinitionException;
-import com.superyuuki.yuukomponent.api.component.Component;
 
 import java.util.Map;
 

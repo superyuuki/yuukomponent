@@ -3,7 +3,7 @@ package com.superyuuki.yuukomponent.sql;
 import com.superyuuki.yuukomponent.api.component.error.MissingRootException;
 import com.superyuuki.yuukomponent.api.component.error.MissingRootUpdateException;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchComponentException;
-import com.superyuuki.yuukomponent.api.component.newtype.StructDriver;
+import com.superyuuki.yuukomponent.api.component.low.StructDriver;
 import space.arim.jdbcaesar.JdbCaesar;
 import space.arim.omnibus.util.UUIDUtil;
 
@@ -117,7 +117,7 @@ public class SQLStructDriver implements StructDriver {
     }
 
     @Override
-    public List<UUID> allWithoutParents(UUID toCheck) {
+    public List<UUID> allWithoutParents() {
         throw new UnsupportedOperationException("Implement later since no one gives a shit");
     }
 }

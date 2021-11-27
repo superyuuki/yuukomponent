@@ -5,7 +5,7 @@ import space.arim.omnibus.util.concurrent.CentralisedFuture;
 import java.util.List;
 import java.util.UUID;
 
-public interface StructureSearcher {
+public interface StructureQuerier {
 
     /**
      * Returns a complete path of self and all child components in execution order

@@ -1,29 +1,30 @@
-package com.superyuuki.yuukomponent.core.component;
+package com.superyuuki.yuukomponent.core.component.low;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
-import com.superyuuki.yuukomponent.api.component.Component;
+import com.superyuuki.yuukomponent.api.behavior.Behavior;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchComponentException;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchDefinitionException;
-import com.superyuuki.yuukomponent.api.component.newtype.CachedCompDriver;
-import com.superyuuki.yuukomponent.api.component.newtype.CompDriver;
+import com.superyuuki.yuukomponent.api.component.low.CompDriver;
+import com.superyuuki.yuukomponent.api.component.low.CompPool;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-public class CaffeineCompDriver implements CachedCompDriver {
+public class CaffeineCompPool implements CompPool {
 
     private final CompDriver driver;
-    private final Cache<UUID, Component> cache;
+    private final Cache<UUID, Behavior> cache;
 
-    public CaffeineCompDriver(CompDriver driver, Duration duration) {
+    public CaffeineCompPool(CompDriver driver, Duration duration) {
         this.driver = driver;
         this.cache = Caffeine.newBuilder().expireAfterAccess(duration).build();
     }
 
     @Override
-    public Component get(UUID uuid) throws NoSuchComponentException, NoSuchDefinitionException {
+    public Behavior get(UUID uuid) throws NoSuchComponentException, NoSuchDefinitionException {
         return cache.get(uuid, driver::get);
     }
 
@@ -45,7 +46,19 @@ public class CaffeineCompDriver implements CachedCompDriver {
     }
 
     @Override
-    public Optional<Component> getCached(UUID uuid) {
+    public Optional<Behavior> getCached(UUID uuid) {
         return Optional.ofNullable(cache.getIfPresent(uuid));
     }
+
+    @Override
+    public List<Behavior> getCached(List<UUID> uuids) {
+
+        for (UUID uuid) {
+            cache.getAllPresent()
+        }
+
+        return null;
+    }
+
+
 }

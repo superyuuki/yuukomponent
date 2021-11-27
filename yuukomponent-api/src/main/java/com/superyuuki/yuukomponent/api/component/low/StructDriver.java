@@ -1,4 +1,4 @@
-package com.superyuuki.yuukomponent.api.component.newtype;
+package com.superyuuki.yuukomponent.api.component.low;
 
 import com.superyuuki.yuukomponent.api.component.error.MissingRootException;
 import com.superyuuki.yuukomponent.api.component.error.MissingRootUpdateException;
@@ -18,6 +18,6 @@ public interface StructDriver {
         return getParent(toCheck).isEmpty();
     }
     Optional<UUID> getParent(UUID toCheck);
-    List<UUID> allWithoutParents(UUID toCheck); //relatively expensive call
+    List<UUID> allWithoutParents(); //relatively expensive call
 
 }

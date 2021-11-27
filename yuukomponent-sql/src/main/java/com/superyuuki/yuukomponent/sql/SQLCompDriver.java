@@ -4,7 +4,7 @@ import com.superyuuki.yuukomponent.api.behavior.Behavior;
 import com.superyuuki.yuukomponent.api.behavior.BehaviorRegistry;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchComponentException;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchDefinitionException;
-import com.superyuuki.yuukomponent.api.component.newtype.CompDriver;
+import com.superyuuki.yuukomponent.api.component.low.CompDriver;
 import space.arim.jdbcaesar.JdbCaesar;
 
 import java.util.UUID;

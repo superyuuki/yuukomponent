@@ -10,8 +10,9 @@ import java.util.function.Supplier;
 
 public interface StructureDispatcher {
 
-    <T extends Event> CentralisedFuture<?> dispatch(UUID uuid, Supplier<T> event); //dispatch to all children
-    <T extends Event> CentralisedFuture<?> dispatchImmediate(UUID uuid, Supplier<T> event); //dispatch to immediate children
+    CentralisedFuture<?> dispatch(UUID uuid, Event event); //dispatch to all children
+    CentralisedFuture<?> dispatchImmediate(UUID uuid, Event event); //dispatch to immediate children
+    CentralisedFuture<?> dispatchAll(Supplier<Event> event);
 
 
 }

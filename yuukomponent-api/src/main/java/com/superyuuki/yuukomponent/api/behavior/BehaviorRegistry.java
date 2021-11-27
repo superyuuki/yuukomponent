@@ -1,5 +1,4 @@
 package com.superyuuki.yuukomponent.api.behavior;
-import com.superyuuki.yuukomponent.api.component.Component;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchDefinitionException;
 
 /**

@@ -1,28 +1,28 @@
-package com.superyuuki.yuukomponent.core.component;
+package com.superyuuki.yuukomponent.core.component.low;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.superyuuki.yuukomponent.api.component.error.MissingRootException;
 import com.superyuuki.yuukomponent.api.component.error.MissingRootUpdateException;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchComponentException;
-import com.superyuuki.yuukomponent.api.component.newtype.CachedStructDriver;
-import com.superyuuki.yuukomponent.api.component.newtype.StructDriver;
-import com.superyuuki.yuukomponent.core.component.op.AddChildOperation;
-import com.superyuuki.yuukomponent.core.component.op.RemoveChildOperation;
-import com.superyuuki.yuukomponent.core.component.op.SetChildOperation;
+import com.superyuuki.yuukomponent.api.component.low.StructPool;
+import com.superyuuki.yuukomponent.api.component.low.StructDriver;
+import com.superyuuki.yuukomponent.core.component.low.AddChildOperation;
+import com.superyuuki.yuukomponent.core.component.low.RemoveChildOperation;
+import com.superyuuki.yuukomponent.core.component.low.SetChildOperation;
 
 import java.time.Duration;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-public class CaffeineStructDriver implements CachedStructDriver {
+public class CaffeineStructPool implements StructPool {
 
     private final StructDriver driver;
     private final Cache<UUID, List<UUID>> childrenCache;
     private final Cache<UUID, Optional<UUID>> parentCache;
 
-    public CaffeineStructDriver(StructDriver driver, Duration cacheTime) {
+    public CaffeineStructPool(StructDriver driver, Duration cacheTime) {
         this.driver = driver;
         this.childrenCache = Caffeine.newBuilder().expireAfterAccess(cacheTime).build();
         this.parentCache = Caffeine.newBuilder().expireAfterAccess(cacheTime).build();
@@ -80,8 +80,8 @@ public class CaffeineStructDriver implements CachedStructDriver {
     }
 
     @Override
-    public List<UUID> allWithoutParents(UUID toCheck) {
-        return driver.allWithoutParents(toCheck); //fix this lol
+    public List<UUID> allWithoutParents() {
+        return driver.allWithoutParents(); //fix this lol
     }
 
     @Override

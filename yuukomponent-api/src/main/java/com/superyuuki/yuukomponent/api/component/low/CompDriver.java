@@ -1,7 +1,6 @@
-package com.superyuuki.yuukomponent.api.component.newtype;
+package com.superyuuki.yuukomponent.api.component.low;
 
 import com.superyuuki.yuukomponent.api.behavior.Behavior;
-import com.superyuuki.yuukomponent.api.component.Component;
 import com.superyuuki.yuukomponent.api.annotate.Heavy;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchComponentException;
 import com.superyuuki.yuukomponent.api.component.error.NoSuchDefinitionException;
