@@ -14,19 +14,12 @@
         <module>yuukomponent-core</module>
         <module>yuukomponent-spigot</module>
         <module>yuukomponent-dazzleconf-loader</module>
-        <module>yuukomponent-example</module>
-        <module>yuukomponent-devel</module>
-        <module>yuukomponent-stat</module>
         <module>yuukomponent-sql</module>
-        <module>yuukomponent-persistence</module>
-        <module>yuukomponent-addonContext</module>
-        <module>yuuaddons</module>
-        <module>yuukomponent-addons</module>
-        <module>yuukomponent-spigot</module>
+        <module>yuukomponent-bootstrap</module>
     </modules>
 
     <properties>
-        <compiler.version>11</compiler.version>
+        <compiler.version>16</compiler.version>
 
         <maven.compiler.source>${compiler.version}</maven.compiler.source>
         <maven.compiler.target>${compiler.version}</maven.compiler.target>
@@ -38,9 +31,28 @@
             <artifactId>omnibus</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+        <!-- test !-->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.8.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <repositories>
+        <repository>
+            <id>yuuki-releases</id>
+            <name>releases</name>
+            <url>https://repo.superyuuki.com/releases</url>
+        </repository>
         <repository>
             <id>arim-mvn-lgpl3</id>
             <url>https://mvn-repo.arim.space/lesser-gpl3/</url>
@@ -49,9 +61,16 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/superyuuki/yuukomponent</url>
+            <id>yuuki-releases</id>
+            <name>releases</name>
+            <url>https://repo.superyuuki.com/releases</url>
         </repository>
+        <snapshotRepository>
+            <id>yuuki-snapshots</id>
+            <name>snapshots</name>
+            <url>https://repo.superyuuki.com/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
+
 
 </project>

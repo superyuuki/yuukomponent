@@ -9,20 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>yuukomponent-api</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.32</version>
-        </dependency>
-        <dependency>
-            <groupId>com.superyuuki</groupId>
-            <artifactId>yuukonfig</artifactId>
-            <version>1.0.1</version>
-        </dependency>
-    </dependencies>
-
+    <artifactId>yuukomponent-bootstrap</artifactId>
 
 </project>

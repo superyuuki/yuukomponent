@@ -6,6 +6,7 @@ import com.superyuuki.yuukomponent.api.addons.AddonLimitedAccess;
 import com.superyuuki.yuukomponent.api.addons.AddonManager;
 import com.superyuuki.yuukomponent.api.addons.error.*;
 
+import java.nio.file.Path;
 import java.util.Collection;
 
 public class WrappedLimitedAccess implements AddonLimitedAccess {
@@ -20,6 +21,11 @@ public class WrappedLimitedAccess implements AddonLimitedAccess {
         this.platform = platform;
     }
 
+
+    @Override
+    public Path dataFolder() {
+        return null;
+    }
 
     @Override
     public Platform platform() {

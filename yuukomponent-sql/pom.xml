@@ -13,13 +13,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.superyuuki</groupId>
-            <artifactId>yuukomponent-core</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <groupId>space.arim.dazzleconf</groupId>
             <artifactId>dazzleconf-ext-snakeyaml</artifactId>
             <version>1.2.1</version>
@@ -33,6 +26,17 @@
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>5.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+            <version>3.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.superyuuki</groupId>
+            <artifactId>yuukomponent-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
