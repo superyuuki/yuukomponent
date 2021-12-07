@@ -1,19 +1,17 @@
 package com.superyuuki.yuukomponent.api.component;
 
-import com.superyuuki.yuukomponent.api.component.newtype.Component;
-import space.arim.omnibus.util.concurrent.CentralisedFuture;
-
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 public interface StructureQuerier {
 
 
-    CentralisedFuture<List<UUID>> ordered(int id);
-    CentralisedFuture<List<UUID>> orderedImmediate(int id);
-    CentralisedFuture<List<UUID>> orderedFromRoot(int id);
-    CentralisedFuture<List<UUID>> orderedImmediateFromRoot(int id);
+    CompletableFuture<List<UUID>> ordered(int id);
+    CompletableFuture<List<UUID>> orderedImmediate(int id);
+    CompletableFuture<List<UUID>> orderedFromRoot(int id);
+    CompletableFuture<List<UUID>> orderedImmediateFromRoot(int id);
 
-    CentralisedFuture<List<UUID>> all();
+    CompletableFuture<List<UUID>> all();
 
 }

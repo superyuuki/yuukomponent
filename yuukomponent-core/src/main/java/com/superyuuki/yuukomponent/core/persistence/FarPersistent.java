@@ -1,7 +1,6 @@
 package com.superyuuki.yuukomponent.core.persistence;
 
-import space.arim.omnibus.util.concurrent.CentralisedFuture;
-
+import java.util.concurrent.CompletableFuture;
 import java.util.function.UnaryOperator;
 
 /**
@@ -15,7 +14,7 @@ import java.util.function.UnaryOperator;
  */
 public interface FarPersistent<T> {
 
-    CentralisedFuture<T> update(UnaryOperator<T> operator);
-    CentralisedFuture<T> query();
+    CompletableFuture<T> update(UnaryOperator<T> operator);
+    CompletableFuture<T> query();
 
 }

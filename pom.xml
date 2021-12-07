@@ -12,10 +12,9 @@
     <modules>
         <module>yuukomponent-api</module>
         <module>yuukomponent-core</module>
-        <module>yuukomponent-spigot</module>
         <module>yuukomponent-dazzleconf-loader</module>
         <module>yuukomponent-sql</module>
-        <module>yuukomponent-bootstrap</module>
+        <module>yuukomponent-paper</module>
     </modules>
 
     <properties>
@@ -26,10 +25,12 @@
     </properties>
 
     <dependencies>
+
+        <!-- config !-->
         <dependency>
-            <groupId>space.arim.omnibus</groupId>
-            <artifactId>omnibus</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.superyuuki</groupId>
+            <artifactId>yuukonfig</artifactId>
+            <version>1.0.1</version>
         </dependency>
 
         <!-- test !-->
@@ -52,10 +53,6 @@
             <id>yuuki-releases</id>
             <name>releases</name>
             <url>https://repo.superyuuki.com/releases</url>
-        </repository>
-        <repository>
-            <id>arim-mvn-lgpl3</id>
-            <url>https://mvn-repo.arim.space/lesser-gpl3/</url>
         </repository>
     </repositories>
 

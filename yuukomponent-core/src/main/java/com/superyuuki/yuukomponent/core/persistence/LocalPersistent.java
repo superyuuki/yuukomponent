@@ -1,7 +1,5 @@
 package com.superyuuki.yuukomponent.core.persistence;
 
-import space.arim.omnibus.util.concurrent.CentralisedFuture;
-
 import java.util.function.UnaryOperator;
 
 /**

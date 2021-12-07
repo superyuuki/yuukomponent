@@ -5,12 +5,14 @@ import com.github.benmanes.caffeine.cache.Caffeine;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
+import space.arim.omnibus.util.concurrent.CentralisedFuture;
 import space.arim.omnibus.util.concurrent.FactoryOfTheFuture;
 import space.arim.omnibus.util.concurrent.impl.IndifferentFactoryOfTheFuture;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class SQLLocatorTest {
 
@@ -21,6 +23,10 @@ public class SQLLocatorTest {
         FactoryOfTheFuture factory = new IndifferentFactoryOfTheFuture();
 
         AsyncLoadingCache<Integer, List<Integer>> testCache = Caffeine.newBuilder().buildAsync(new MockCacheLoader());
+
+        CentralisedFuture.supplyAsync(() -> {
+            //loadcode
+        });
 
         testCache.getAll(List.of(1)).thenCompose(ignored -> {
             return recursive(1, testCache, factory);

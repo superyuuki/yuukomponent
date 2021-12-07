@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public class NoSuchComponentException extends YuuKomponentException
 {
-    public NoSuchComponentException(UUID cause) {
+    public NoSuchComponentException(int cause) {
         super(String.format("A component with id: %s was queried for but no such component exists!", cause));
     }
 

@@ -8,49 +8,46 @@ import space.arim.omnibus.util.concurrent.FactoryOfTheFuture;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public class SQLLocator implements Locator {
 
-    private final FactoryOfTheFuture factory;
     private final Driver driver;
 
     private final AsyncCache<Integer, List<Integer>> cache = Caffeine.newBuilder().buildAsync();
 
-    public SQLLocator(FactoryOfTheFuture factory, Driver driver) {
-        this.factory = factory;
+    public SQLLocator(Driver driver) {
         this.driver = driver;
     }
 
-
-
     @Override
-    public CentralisedFuture<List<Integer>> withDescendants(int parent) {
+    public CompletableFuture<List<Integer>> withDescendants(int parent) {
         return preload(parent).thenCompose(ignored -> recursive(parent));
     }
 
-    public CentralisedFuture<?> preload(Integer integer) {
-        return factory.copyFuture(cache.getAll(List.of(integer), (s, e) -> {
-            return factory.supplyAsync(() -> driver.allChildren(integer)); //load every required resource into cache
-        }));
+    public CompletableFuture<?> preload(Integer integer) {
+        return cache.getAll(List.of(integer), (s, e) -> {
+            return CompletableFuture.supplyAsync(() -> driver.loadTrees(integer), e); //load every required resource into cache
+        });
     }
 
-    public CentralisedFuture<List<Integer>> recursive(int top) {
-        return (CentralisedFuture<List<Integer>>) cache.get(top, (s, e) -> { //should never be called since recursive will be invoked after a getAll
+    public CompletableFuture<List<Integer>> recursive(int top) {
+        return cache.get(top, (s, e) -> { //should never be called since recursive will be invoked after a getAll
             throw new IllegalStateException("Could not load supposedly cached value from cache!");
             //return factory.supplyAsync(() -> driver.immediateChildren(top));
         }).thenCompose(li -> {
 
-            List<CentralisedFuture<List<Integer>>> col = new ArrayList<>();
+            List<CompletableFuture<List<Integer>>> col = new ArrayList<>();
 
             for (Integer held : li) {
                 col.add(recursive(held));
             }
 
-            return factory.allOf(col).thenApply(ignored -> {
+            return CompletableFuture.allOf(col.toArray(CompletableFuture[]::new)).thenApply(ignored -> {
                 List<Integer> toReturn = new ArrayList<>();
                 toReturn.add(top);
 
-                for (CentralisedFuture<List<Integer>> subfuture : col) {
+                for (CompletableFuture<List<Integer>> subfuture : col) {
                     toReturn.addAll(subfuture.join());
                 }
 
@@ -61,37 +58,37 @@ public class SQLLocator implements Locator {
     }
 
     @Override
-    public CentralisedFuture<List<Integer>> withChildren(int parent) {
+    public CompletableFuture<List<Integer>> withChildren(int parent) {
         return null;
     }
 
     @Override
-    public CentralisedFuture<List<Integer>> fromRoot(int child) {
+    public CompletableFuture<List<Integer>> fromRoot(int child) {
         return null;
     }
 
     @Override
-    public CentralisedFuture<List<Integer>> fromRootChildren(int child) {
+    public CompletableFuture<List<Integer>> fromRootChildren(int child) {
         return null;
     }
 
     @Override
-    public CentralisedFuture<List<Integer>> fromGlobal() {
+    public CompletableFuture<List<Integer>> fromGlobal() {
         return null;
     }
 
     @Override
-    public CentralisedFuture<Boolean> add(int child, int parent) {
+    public CompletableFuture<Boolean> add(int child, int parent) {
         return null;
     }
 
     @Override
-    public CentralisedFuture<Boolean> remove(int child, int parent) {
+    public CompletableFuture<Boolean> remove(int child, int parent) {
         return null;
     }
 
     @Override
-    public CentralisedFuture<Boolean> replace(int parent, int remove, int add) {
+    public CompletableFuture<Boolean> replace(int parent, int remove, int add) {
         return null;
     }
 }

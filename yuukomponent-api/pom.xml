@@ -17,11 +17,6 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.32</version>
         </dependency>
-        <dependency>
-            <groupId>com.superyuuki</groupId>
-            <artifactId>yuukonfig</artifactId>
-            <version>1.0.1</version>
-        </dependency>
     </dependencies>
 
 

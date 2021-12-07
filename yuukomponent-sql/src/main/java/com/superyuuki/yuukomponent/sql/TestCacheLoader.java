@@ -29,7 +29,7 @@ public class TestCacheLoader implements AsyncCacheLoader<Integer, List<Integer>>
         if (keys.size() > 1) throw new IllegalStateException("Cannot use asyncLoadAll in TestCacheLoader with more than one element!");
 
         for (Integer integer : keys) {
-            return factory.supplyAsync(() -> driver.allChildren(integer)); //dump first
+            return factory.supplyAsync(() -> driver.loadTrees(integer)); //dump first
         }
 
         throw new IllegalStateException("No key in set!");
