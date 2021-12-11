@@ -1,11 +1,9 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader;
 
-import com.superyuuki.yuukomponent.api.behavior.ConfSection;
 import space.arim.dazzleconf.annote.ConfComments;
 import space.arim.dazzleconf.annote.ConfKey;
 import space.arim.dazzleconf.annote.SubSection;
 
-import java.util.List;
 import java.util.Map;
 
 public interface Config {

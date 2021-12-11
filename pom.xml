@@ -26,6 +26,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.superyuuki</groupId>
+            <artifactId>yuukonstants</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <!-- config !-->
         <dependency>
             <groupId>com.superyuuki</groupId>
@@ -37,13 +43,13 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.1</version>
+            <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>5.8.1</version>
+            <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

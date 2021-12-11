@@ -1,10 +1,6 @@
 package com.superyuuki.yuukomponent.sql;
 
-import com.superyuuki.yuukomponent.api.component.newtype.Component;
-import com.superyuuki.yuukomponent.api.component.storage.Children;
-
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 
 public interface Driver {
@@ -33,13 +29,17 @@ public interface Driver {
      * @return a map of integers to children guaranteed to hold a mapping for every requested key as well as
      * recursive mappings for each of the root keys' descendants
      */
-    Map<Integer, Children> loadTrees(Collection<Integer> keys);
+    Map<Integer, Integer[]> loadTrees(Collection<Integer> keys);
+
+    Map<Integer, String> loadTypes(Collection<Integer> keys);
 
     /**
      * Fallback method for when a parent is invalidated during a recursion call
      * @param key the key
      * @return children
      */
-    Children loadChildren(Integer key);
+    Integer[] loadChildren(Integer key);
+
+
 
 }

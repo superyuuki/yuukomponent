@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core.persistence;
 
-import com.superyuuki.yuukomponent.api.behavior.Event;
+import com.superyuuki.yuukomponent.api.trait.Event;
 
 import java.util.function.Supplier;
 

@@ -1,9 +1,5 @@
 package com.superyuuki.yuukomponent.core.stats;
 
-import com.superyuuki.yuukomponent.api.behavior.BehaviorSource;
-import com.superyuuki.yuukomponent.api.behavior.ConfSection;
-import com.superyuuki.yuukomponent.api.behavior.error.NoSuchBehaviorValueFailure;
-import com.superyuuki.yuukomponent.api.behavior.error.WrongTypeValueFailure;
 import com.superyuuki.yuukomponent.api.event.EventDispatcher;
 
 public class StatBehaviorLoader implements BehaviorLoader {

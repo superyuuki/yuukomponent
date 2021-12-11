@@ -9,10 +9,10 @@ This is irrelevant now
 - **Structure**: The ability to save state related to how a component tree is represented (e.g. what the component's ID is, what children it currently holds, what slots it has)
 - **Persistence**: The ability to save state directly coupled to a component
 - **Plugin**: Something providing extended functionality to YuuKomponent, such as more Behavior definitions or a Nexus
-- **Nexus**: Collection point for behavior signals, typically provides functionalities to other behaviors
+- **Nexus**: Collection point for trait signals, typically provides functionalities to other behaviors
 - **Configuration**: Arbitrary user-assiged values attached to a Component that provide information to a Behavior on how to function. Typically, Configuration provides information on how Stats should be built.
-- **Stats**: A behavior + nexus implementation of a recursive Component tree search that combines children Nodes' Configuration values to provide a compound value for use by relevant behaviors.
-- **Persistents**: A behavior + nexus implementation of Persistence
+- **Stats**: A trait + nexus implementation of a recursive Component tree search that combines children Nodes' Configuration values to provide a compound value for use by relevant behaviors.
+- **Persistents**: A trait + nexus implementation of Persistence
 - **Slot**: TODO
 - **Tag**: TODO
 - **Completion**: TODO
@@ -24,9 +24,9 @@ Status NO means not implemented yet, WIP is work in progress, and DONE is comple
 | --- | --- | --- |
 | NO | Behavior Loading | The ability to load behaviors from a registry |
 | NO | Behavior Insertion | Core part of how YuuKomponent will be extensible, the ability for external addons to insert new behaviors to the registry safely and checkly |
-| DONE | Component Modelling | Core design of how components will relay behavior and structure change to children |
+| DONE | Component Modelling | Core design of how components will relay trait and structure change to children |
 | WIP | Component Loading | The ability for components to be loaded from various sources, including: Configuration Definition, Unordered Persistent Data (PDC), Manual addonContext insertion |
-| NO | Abstract Components | The ability for configuration definition to specify abstract components which are incomplete but can have behavior and configuration values specified and inherited |
+| NO | Abstract Components | The ability for configuration definition to specify abstract components which are incomplete but can have trait and configuration values specified and inherited |
 | NO(TBA) | Component Inheritance | The ability for *fully functional* components to be inherited from by another component. Adds a second layer of depth to configuration, where a component is either expected to inherit functionality from relevant child nodes or is based off an existing functionality but as a separate derivative (e.g. not a child) | 
 | N/A | Custom Component Loading | The ability for base component type to be modified such to accept structurally separate components such as one with a LIFO queue of children to support exotic features like magazines |
 | DONE | Stat Calculation | The ability for the inbuilt stat feature to calculate stats down the stat tree. |

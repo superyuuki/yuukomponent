@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader.error;
 
-import com.superyuuki.yuukomponent.api.behavior.error.BadConfigFailure;
+import com.superyuuki.yuukomponent.api.trait.error.BadConfigFailure;
 
 public class UnspecifiedConfigFailure extends BadConfigFailure {
 

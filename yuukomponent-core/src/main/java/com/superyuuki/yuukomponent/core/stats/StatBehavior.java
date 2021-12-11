@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.core.stats;
 
-import com.superyuuki.yuukomponent.api.behavior.types.AsyncBehavior;
+import com.superyuuki.yuukomponent.api.trait.types.AsyncBehavior;
 
 import java.util.Map;
 import java.util.function.UnaryOperator;

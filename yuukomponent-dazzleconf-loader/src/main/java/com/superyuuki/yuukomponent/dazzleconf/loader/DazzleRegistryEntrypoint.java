@@ -3,9 +3,8 @@ package com.superyuuki.yuukomponent.dazzleconf.loader;
 import com.superyuuki.yuukomponent.api.StartupFailure;
 import com.superyuuki.yuukomponent.api.addons.AddonContext;
 import com.superyuuki.yuukomponent.api.addons.AddonLimitedAccess;
-import com.superyuuki.yuukomponent.api.behavior.BehaviorPool;
-import com.superyuuki.yuukomponent.api.behavior.BehaviorRegistry;
-import com.superyuuki.yuukomponent.api.behavior.error.BadConfigFailure;
+import com.superyuuki.yuukomponent.api.trait.TraitFactory;
+import com.superyuuki.yuukomponent.api.trait.error.BadConfigFailure;
 
 @AddonContext(
         name = "core-dazzle-registry",
@@ -21,7 +20,7 @@ public class DazzleRegistryEntrypoint implements RegistryEntrypoint {
     }
 
     @Override
-    public BehaviorRegistry load(BehaviorPool behaviorPool) throws BadConfigFailure {
+    public TraitFactory load(BehaviorPool behaviorPool) throws BadConfigFailure {
         return null;
     }
 }

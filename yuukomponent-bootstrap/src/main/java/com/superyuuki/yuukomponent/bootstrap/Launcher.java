@@ -6,7 +6,7 @@ import com.superyuuki.yuukomponent.api.addons.AddonManager;
 import com.superyuuki.yuukomponent.api.addons.impl.BasicValidator;
 import com.superyuuki.yuukomponent.api.addons.impl.JarAddonSource;
 import com.superyuuki.yuukomponent.api.addons.impl.QualityAddonDriver;
-import com.superyuuki.yuukomponent.api.behavior.BehaviorEntrypoint;
+import com.superyuuki.yuukomponent.api.trait.BehaviorEntrypoint;
 import com.superyuuki.yuukomponent.api.exception.ExceptionReader;
 
 import java.nio.file.Path;

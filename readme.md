@@ -7,7 +7,7 @@ of writing custom item plugins which are persistent, modular, fast to write and 
 How do you (as a minecraft server owner) use it?
 
 1. Download YuuKomponent to your server's plugins folder
-2. Install a behavior addonContext to YuuKomponent's addons folder to add features
+2. Install a trait addonContext to YuuKomponent's addons folder to add features
 3. Write a file.yml containing the items you want to invent to the definitions folder
 4. Reload the addonContext
 
@@ -22,7 +22,7 @@ Some cool features that yuukomponent allows you to implement are
 
 # Example
 
-A modular custom item with reusable behavior is as simple as
+A modular custom item with reusable trait is as simple as
 
 ```yaml
 Shotgun:
@@ -46,7 +46,7 @@ Shotgun:
   - [Replicating Other Plugins](#replicating-other-plugins)
     - [Replicating CrackShot](#replicating-crackshot)
 - [Developer Quick Start](#developer-quick-start)
-  - [Writing a Behavior](#writing-a-behavior)
+  - [Writing a Behavior](#writing-a-trait)
 - [Minimalism](#minimalism)
 
 ## Quick Start
@@ -66,7 +66,7 @@ These following diagrams show one way to replicate existing plugins within YuuKo
 
 ### Replicating Crackshot
 
-*This is all out of date since there is now a significant intention to shift every feature to a module and every item feature to a behavior: slots and tags will be behaviors.
+*This is all out of date since there is now a significant intention to shift every feature to a module and every item feature to a trait: slots and tags will be behaviors.
 
 Here is YuuKomponent acting as a gun addonContext.
 
@@ -230,9 +230,9 @@ Add the following block
 
 After this you should be good to go.
 
-## Writing a behavior
+## Writing a trait
 
-To make a behavior you need a behavior source, the actual behavior, and a behavior loader if you want it to work with configs (which you do).
+To make a trait you need a trait source, the actual trait, and a trait loader if you want it to work with configs (which you do).
 
 You will need to insert these things into YuuKomponent via an addonContext or a addonContext.
 

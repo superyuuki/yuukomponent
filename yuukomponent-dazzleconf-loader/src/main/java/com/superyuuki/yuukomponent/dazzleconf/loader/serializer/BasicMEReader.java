@@ -1,7 +1,7 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader.serializer;
 
 import com.superyuuki.yuukomponent.api.StartupFailure;
-import com.superyuuki.yuukomponent.api.behavior.error.BadConfigIOFailure;
+import com.superyuuki.yuukomponent.api.trait.error.BadConfigIOFailure;
 import com.superyuuki.yuukomponent.dazzleconf.loader.error.*;
 import space.arim.dazzleconf.error.*;
 

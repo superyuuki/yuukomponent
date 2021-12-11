@@ -1,6 +1,6 @@
 package com.superyuuki.yuukomponent.api;
 
-import com.superyuuki.yuukomponent.api.behavior.Event;
+import com.superyuuki.yuukomponent.api.trait.Event;
 
 public interface EventApi {
 

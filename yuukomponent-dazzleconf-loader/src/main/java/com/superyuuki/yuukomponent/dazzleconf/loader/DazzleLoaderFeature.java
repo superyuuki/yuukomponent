@@ -1,7 +1,7 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader;
 
-import com.superyuuki.yuukomponent.api.behavior.BehaviorRegistry;
-import com.superyuuki.yuukomponent.api.behavior.error.BadConfigFailure;
+import com.superyuuki.yuukomponent.api.trait.TraitFactory;
+import com.superyuuki.yuukomponent.api.trait.error.BadConfigFailure;
 import com.superyuuki.yuukomponent.api.event.EventDispatcher;
 
 import java.io.IOException;
@@ -12,13 +12,13 @@ public class DazzleLoaderFeature implements RegistryEntrypoint {
 
     private final Path[] files;
     private final UUIDProvider provider;
-    private final BehaviorRegistry behaviorRegistry;
+    private final TraitFactory traitFactory;
     private final EventDispatcher dispatcher;
 
-    public DazzleLoaderFeature(Path[] files, UUIDProvider provider, BehaviorRegistry behaviorRegistry, EventDispatcher dispatcher) {
+    public DazzleLoaderFeature(Path[] files, UUIDProvider provider, TraitFactory traitFactory, EventDispatcher dispatcher) {
         this.files = files;
         this.provider = provider;
-        this.behaviorRegistry = behaviorRegistry;
+        this.traitFactory = traitFactory;
         this.dispatcher = dispatcher;
     }
 
@@ -31,12 +31,12 @@ public class DazzleLoaderFeature implements RegistryEntrypoint {
      * @throws IOException if exception
      */
     @Override
-    public BehaviorRegistry load() throws BadConfigFailure, IOException {
+    public TraitFactory load() throws BadConfigFailure, IOException {
         return new MappedComponentRegistry(
                 Map.copyOf(
                         new SourceLoader(
                                 new SectionLoader(files).load(),
-                                behaviorRegistry,
+                                traitFactory,
                                 dispatcher,
                                 provider
                         ).load()

@@ -1,6 +1,5 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader;
 
-import com.superyuuki.yuukomponent.api.behavior.ConfSection;
 import space.arim.dazzleconf.error.BadValueException;
 import space.arim.dazzleconf.serialiser.Decomposer;
 import space.arim.dazzleconf.serialiser.FlexibleType;

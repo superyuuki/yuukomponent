@@ -1,8 +1,5 @@
 package com.superyuuki.yuukomponent.dazzleconf.loader.serializer;
 
-import com.superyuuki.yuukomponent.api.behavior.BehaviorSource;
-import com.superyuuki.yuukomponent.api.behavior.error.NoSuchBehaviorValueFailure;
-import com.superyuuki.yuukomponent.api.behavior.error.WrongTypeValueFailure;
 import com.superyuuki.yuukomponent.dazzleconf.loader.ComponentSource;
 import com.superyuuki.yuukomponent.dazzleconf.loader.DazzleConfSection;
 import space.arim.dazzleconf.error.BadValueException;
